@@ -1,0 +1,57 @@
+
+@font-face {
+	font-family: "CODE_Bold.otf";
+	src: url('polices/CODE_Bold.otf');
+}
+
+@font-face {
+	font-family: "Rambler";
+	src: url('../webfonts/polices/Rambler.ttf');
+}
+
+/*
+@font-face {
+	font-family: "KeepCalm_Medium.ttf";
+	src: url('polices/KeepCalm_Medium.ttf');
+}
+
+*/
+
+#QuiEtesVous{
+    cursor: pointer;
+}
+.rambler{
+    font-family: "Rambler";
+}
+.formnoborderbottom{
+    border-width: 0px 0px 1px 0px; border-radius: 0px;
+}
+
+.formnoborder{
+  border:none;
+}
+.alignleft{
+    text-align: left;
+}
+.padding0{
+    padding: 0px;
+}
+.margin0{
+    margin: 0px 0px 0px 0px;
+}
+.flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around
+}
+.bgColor{
+color: #C31120;
+}
+.bggradient{
+     background-image: -webkit-gradient(linear, left top, right top, from(#5192e1), color-stop(51%, #FF4000), to(#5192e1));
+    background-image: -webkit-linear-gradient(left, #5192e1 0%, #FF4000 51%, #5192e1 100%);
+    background-image: -moz-linear-gradient(left, #5192e1 0%, #FF4000 51%, #5192e1 100%);
+    background-image: -o-linear-gradient(left, #5192e1 0%, #FF4000 51%, #5192e1 100%);
+    background-image: linear-gradient(to right, #5192e1 0%, #FF4000 51%, #5192e1 100%);
+}

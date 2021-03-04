@@ -1,0 +1,559 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Achat Europe-Ocaz{% endblock %}
+{% block stylesheets %}
+    <style>
+        .padding0px{
+            padding: 0px;
+        }
+
+        .margin0px{
+            margin: 0px;
+        }
+
+    </style>
+
+{% endblock %}
+
+
+{% block body %}
+    <!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="cssload-loader"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+
+    <!--Page Header-->
+    <section id="main-banner-page" class="position-relative page-header service-detail-header section-nav-smooth parallax">
+        <div class="overlay overlay-dark opacity-7 z-index-1"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="page-titles whitecolor text-center padding_top padding_bottom">
+                        <h2 class="font-xlight" style="font-size: 4em; font-family: Rambler;">Bienvenus sur </h2>
+                        <h1 class="font-bold" >EUROPE-OCAZ</h1>
+                        <!--<h2 class="font-xlight">&</h2>
+                        <h1 class="font-light pt-2" style="font-size: 1.5em;">Pièces détachées neuves ou d'occasion.</h1>-->
+                    </div>
+                </div>
+            </div>
+            <div class="gradient-bg title-wrap">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 whitecolor">
+                        <h3 class="float-left" style="font-size: 4em; font-family: Rambler;">Europe-ocaz</h3>
+                        <ul class="breadcrumb top10 bottom10 float-right">
+                            <li class="breadcrumb-item hover-light"><a href="index.html">Accueil</a></li>
+                            <li class="breadcrumb-item hover-light">Formulaire de demande</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Page Header ends -->
+    <!-- Services us -->
+    <section id="our-services" class="padding bglight">
+        <div class="container">
+            <div class="row whitebox top15">
+                <div class="col-lg-8 col-md-7">
+                    <div class="widget heading_space text-center text-md-left">
+                        <!--<h1 class="darkcolor font-normal bottom30" style="font-size: 1.5em;">VEHICULES D'OCCASION & PIECES DETACHEES</h1>-->
+                        <!-- <p class="bottom30" style="text-align: center;">Cette page vous permet de formuler votre demande de service en moins de 3 minutes. <br>N'hésitez plus, nous t'attendons plus que vous.</p>-->
+
+                        <!--  <p class="bottom30">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>-->
+                        <div class="row">
+                            <!-- <div class="col-lg-6 col-md-6 mt-5 mt-md-0">
+                                <form class="getin_form wow fadeInUp" data-wow-delay="400ms">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" placeholder="Nom & Prénom :" required id="first_name1" name="first_name">
+                                                <label for="first_name1" class="d-none"></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="form-group">
+                                                <select class="form-control">
+                                                    <option>kjhkljhkljhkljhjhkljhkljh</option>
+                                                    <option>kjhkljhkljhkljhjhkljhkljh</option>
+                                                    <option>kjhkljhkljhkljhjhkljhkljh</option>
+                                                    <option>kjhkljhkljhkljhjhkljhkljh</option>
+                                                    <option>kjhkljhkljhkljhjhkljhkljh</option>
+
+                                                </select>
+                                                <input class="form-control" type="text" placeholder="Nom & Prénom :" required id="first_name1" name="first_name">
+                                                <label for="first_name1" class="d-none"></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="form-group">
+                                                <input class="form-control" type="tel" placeholder="Company Name" id="company-name1">
+                                                <label for="company-name1" class="d-none"></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="form-group">
+                                                <input class="form-control" type="email" placeholder="Email:" required id="email1" name="email">
+                                                <label for="email1" class="d-none"></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="form-group">
+                                                <textarea class="form-control"  placeholder="Request a FreeConsultation" required id="FreeConsultation1"></textarea>
+                                                <label for="FreeConsultation1" class="d-none"></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12">
+                                            <button type="submit" class="button gradient-btn w-100" id="submit_btn1">Free Consultation</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>-->
+                            <div class="col-lg-12 col-md-12">
+                                <form id="accordion" method="post" action="">
+                                    <div class="card">
+                                        <div class="form-group col-lg-12 col-md-12 formnoborder" style="margin: 0px; padding: 10px;">
+                                            <select id="jeSuis" name="jeSuis" class="form-control formnoborder" style="margin: 0px; padding: 0px; background-color:transparent; cursor: pointer;">
+                                                <option value="0">JE SUIS ... </option>
+                                                <option value="1">UN PARTICULIER</option>
+                                                <option value="2">UNE ENTREPRISE</option>
+                                                <option value="3">UN COMMERCANT</option>
+                                            </select>
+                                            <label for="first_name1" class="d-none"></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <a class="card-link darkcolor" data-toggle="collapse" href="#"><span id="user"></span> GENERALIT&Eacute;S</a>
+                                        </div>
+                                        <div id="collapseOne" class="collapse" data-parent="#accordion">
+
+                                            <!--<div id="entreprisesCommercants" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap; display: none;">
+
+
+                                                </div>-->
+
+
+
+
+                                            <div id="entreprisesCommercants" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                    <input class="form-control colorme formnoborderbottom" type="text" placeholder="" id="raisonsociale" name="raisonsociale" onfocusout="AlphaNumverification($(this));" maxlength="32" datacheck="">
+                                                    <span class="formIncice">Raison sociale <span class="sizelabel">(32)</span></span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="adressemail1" name="adressemail1" onfocusout="Mailverification($(this));" maxlength="32" datacheck="">
+                                                    <span class="formIncice">Adresse-mail <span class="sizelabel">(64)</span></span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="telephone1" name="telephone1" style="" onfocusout="Numverification($(this));" maxlength="16" datacheck="">
+                                                    <span class="formIncice">Téléphone <span class="sizelabel">(16)</span></span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="adresse1" name="adresse1" onfocusout="AlphaNumverification($(this));" maxlength="200" datacheck="">
+                                                    <span class="formIncice">Adresse physique <span class="sizelabel">(200)</span></span><span class="formIncice"></span>
+
+                                                </div>
+
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="personnescontact" name="personnescontact" maxlength="32" datacheck="" onfocusout="Alphaverification($(this));">
+                                                    <span class="formIncice">Saisir les noms des personnes à contacter, séparées par un tiret. <span class="sizelabel">(32)</span></span><span class="formIncice"></span>
+                                                </div>
+                                                <!-- <span type="" class="button gradient-btn w-100" id="" onclick="validerCommande();" style="cursor: pointer;">suivant</span>-->
+                                                <p class="col-lg-12 alignRigth">
+                                                    <span class="suivant button w-100" onclick="SuivantentrepriseCommercant();">Suivant <i class="fas fa-chevron-circle-right"></i></span>
+                                                </p>
+
+                                            </div>
+
+                                            <div id="etudiantsParticuliers" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="nometprenoms" name="nometprenoms"  onfocusout="Alphaverification($(this));" datacheck="">
+                                                    <span class="formIncice">Noms & Prénoms (même format que sur la pièce d'identité) <span class="sizelabel">(32)</span></span><span class="formIncice"></span>
+
+                                                </div>
+
+                                                <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="adressemail2" name="adressemail2" onfocusout="Mailverification($(this));" datacheck="">
+                                                    <span class="formIncice">Adresse mail <span class="sizelabel">(64)</span></span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="telephone2" name="telephone2" onfocusout="Numverification($(this));" datacheck="">
+                                                    <span class="formIncice">Téléphone (et/ou Whatsapp) <span class="sizelabel">(16)</span></span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder=""  id="adresse2" name="adresse2" onfocusout="AlphaNumverification($(this));" datacheck="">
+                                                    <span class="formIncice">Adresse de résidence (carré - maison - quartier) <span class="sizelabel">(200)</span></span><span class="formIncice"></span>
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <!-- <span type="" class="button gradient-btn w-100" id="" onclick="validerCommande();" style="cursor: pointer;">suivant</span> -->
+
+                                                </div>
+                                                <p class="col-lg-12 alignRigth">
+                                                    <span class="suivant" onclick="Suivantparticulier();">Suivant <i class="fas fa-chevron-circle-right"></i></span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <a id="ServiceDemande"  class="card-link darkcolor" data-toggle="collapse" href="#">D&Eacute;TAILS DU SERVICE <span> - COMMANDE N°</span><strong id="numcommande" name="numcommande"></strong></a>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse show" data-parent="#accordion">
+                                            <div id="DetailServices" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_qvv">
+                                                    <select id="QueVoulezVous" name="QueVoulezVous" class="form-control formnoborderbottom" onchange="piecedetache();">
+                                                        <option value="1"></option>
+                                                        <option value="2">Une voiture d'occasion</option>
+                                                        <option value="3">Une moto d'occasion</option>
+                                                        <option value="4">Un camion d'occasion</option>
+                                                        <option value="5">Un bus d'occasion</option>
+                                                        <option value="6">Un mini-bus d'occasion</option>
+                                                        <option value="7"><i class="fas fa-tractor"></i> Engin agricole d'occasion</option>
+                                                        <option value="8">Une pièce détachée</option>
+                                                        <option value="9">Autres</option>
+                                                    </select>
+
+
+                                                    <span class="formIncice"><sup class="colorstar">*</sup><i class="fas fa-question-circle"></i> Que voulez-vous ?</span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_piecepour" >
+                                                    <select id="piecepour" name="piecepour" class="form-control formnoborderbottom" onchange="piecedetache();">
+                                                        <option value="1"></option>
+                                                        <option value="2">Une voiture d'occasion</option>
+                                                        <option value="3">Une moto d'occasion</option>
+                                                        <option value="4">Un camion d'occasion</option>
+                                                        <option value="5">Un bus d'occasion</option>
+                                                        <option value="6">Un mini-bus d'occasion</option>
+                                                        <option value="7"><i class="fas fa-tractor"></i> Engin agricole d'occasion</option>
+                                                        <option value="8">Des pièces détachées</option>
+                                                        <option value="9">Autres</option>
+                                                    </select>
+
+
+                                                    <span class="formIncice"><sup class="colorstar">*</sup><i class="fas fa-question-circle"></i> une piece pour ?</span><span class="formIncice"></span>
+                                                </div>
+                                                <div id="div_nompiece" class="form-group col-lg-11 col-md-11 alignleft padding0" >
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="nompiece" name="nompiece"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                    <span class="formIncice"><sup class="colorstar">*</sup> Nom de la pièce <span class="sizelabel">(64)</span></span><span class="formIncice"></span>
+                                                </div>
+                                                <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_neufouocaz">
+                                                    <select id="neufouocaz" name="neufouocaz" class="form-control formnoborderbottom" onchange="piecedetache();">
+                                                        <option value="1"></option>
+                                                        <option value="2">Je veux du neuf</option>
+                                                        <option value="3">Je préfere une occasion</option>
+                                                        <option value="4">Je n'ai pas de préférence</option>
+
+                                                    </select>
+
+
+                                                    <span class="formIncice"><sup class="colorstar">*</sup><i class="fas fa-question-circle"></i> Quel état ?</span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_chassismoto" >
+                                                    <select id="ChassisMoto" name="ChassisMoto" class="form-control formnoborderbottom">
+
+                                                        <option value="1"></option>
+                                                        <option>Sportive</option>
+                                                        <option>Routière</option>
+                                                        <option>Routière GT</option>
+                                                        <option>Custom</option>
+                                                        <option>Trail</option>
+                                                        <option>Tuning</option>
+                                                        <option>Enduro</option>
+                                                        <option>Cross</option>
+                                                        <option>Sidecar</option>
+                                                        <option>Collection</option>
+                                                        <option>3 Roues</option>
+                                                        <option>Scooter</option>
+                                                        <option>Velomoteur</option>
+                                                        <option>Supermotard</option>
+                                                        <option>Poket Bike</option>
+                                                        <option>Roadster</option>
+                                                        <option>Quad</option>
+                                                        <option>Rallye</option>
+                                                        <option>Trial</option>
+                                                        <option>Compétition</option>
+                                                        <option>Autre</option>
+                                                    </select>
+
+
+                                                    <span class="formIncice"><sup class="colorstar">*</sup> <i class="fas fa-motorcycle"></i> Châssis moto ?</span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-5 col-md-5 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="marques" name="marques"  onfocusout="Alphaverification($(this));" datacheck="" maxlength="32">
+                                                    <span class="formIncice"><sup class="colorstar">* </sup><i class="fas fa-tag"></i> Marque ? <span class="sizelabel">(32)</span></span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-5 col-md-5 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="modele" name="modele"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="32">
+                                                    <span class="formIncice"><sup class="colorstar">*</sup> Model ? <span class="sizelabel">(32)</span></span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-5 col-md-5 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="annee" name="annee"  onfocusout="Numverification($(this));" datacheck="" maxlength="4">
+                                                    <span class="formIncice"><sup class="colorstar">*</sup> <i class="fas fa-calendar-alt"></i> Année ? (exp: 2000) <span class="sizelabel">(4)</span></span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-5 col-md-5 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder=""id="PrixMax" name="PrixMax"  onfocusout="Numverification($(this));" datacheck="" maxlength="8">
+                                                    <span class="formIncice"><sup class="colorstar">*</sup> <i class="fas fa-money-bill"></i> Budget max (F CFA) ? <span class="sizelabel">(8)</span></span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-5 col-md-5 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="kilometrage" name="kilometrage"  onfocusout="Numverification($(this));" datacheck="" maxlength="8">
+                                                    <span class="formIncice">&ensp; <i class="fas fa-clock"></i> KM max ? (exp: 75000) <span class="sizelabel">(6)</span></span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_BoiteVitesse">
+                                                    <select id="BoiteVitesse" name="BoiteVitesse" class="form-control formnoborderbottom">
+                                                        <option value="0"> </option>
+                                                        <option>Automatique</option>
+                                                        <option>Manuelle</option>
+                                                        <option>Semi-automatique</option>
+                                                    </select><span class="formIncice"> &ensp;<i class="fas fa-cogs"></i> Boite à vitesse ?</span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_carburant" >
+                                                    <select id="Carburant" name="Carburant" class="form-control formnoborderbottom">
+                                                        <option value="1"> </option>
+                                                        <option>Electrique</option>
+                                                        <option>Essence</option>
+                                                        <option>Diesel</option>
+                                                        <option>Autres</option>
+                                                    </select><span class="formIncice"><sup class="colorstar">*</sup> <i class="fas fa-gas-pump"></i> Type de carburant ?</span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_NbrPortes">
+                                                    <select id="NbrPortes" name="NbrPortes" class="form-control formnoborderbottom">
+                                                        <option value="0"> </option>
+                                                        <option value="1">3 portes</option>
+                                                        <option value="2">5 portes</option>
+                                                        <option>Autres</option>
+                                                    </select><span class="formIncice">&ensp; <i class="fas fa-window-maximize"></i> Nombre de portes?</span><span class="formIncice"></span>
+                                                </div>
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                    <textarea class="form-control formnoborderbottom" type="text" placeholder="" id="InfoComplementaire" name="InfoComplementaire"  datacheck="" maxlength="200"></textarea>
+                                                    <span class="formIncice">Informations complémentaires <span class="sizelabel">(200)</span></span><span class="formIncice"></span>
+                                                </div>
+
+
+
+
+                                                <div class="flexbox col-lg-12">
+                                                    <div class="col-md-6 col-sm-6" style="padding-bottom: 20px;text-align:left;">
+                                                        <span type="submit" class="suivant button" id="" onclick="precedent()"><i class="fas fa-chevron-circle-left"></i> Pécédent</span>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-6" style="padding-bottom: 20px;">
+                                                        <button type="submit" class="button gradient-btn w-100" id="" style="cursor: pointer;">VALIDER</button>
+                                                        <!--onclick="ValidationForm();"-->
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </form>
+                            </div>
+                            <!--
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="collapsed card-link darkcolor" data-toggle="collapse" href="#collapseThree">Inspections & Occupancy </a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="collapsed card-link darkcolor" data-toggle="collapse" href="#collapseFour">Top Achievements </a>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                -->
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <div class="image widget bottom20"><img alt="SEO" src="images/aboutus.png"></div>
+                    <div class="col-12 px-0">
+                        <div class="w-100">
+                            <!-- <div class="full-map short-map" id="map"></div>-->
+                            <div class="owl-carousel" id="service-detail">
+                                <div class="item">
+                                    <div class="image"><img alt="SEO" src="images/blog-measonry2.jpg"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"><img alt="SEO" src="images/blog-measonry2.jpg"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"><img alt="SEO" src="images/blog-measonry2.jpg"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"><img alt="SEO" src="images/blog-measonry2.jpg"></div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="widget heading_space text-center text-md-left">
+                        <h4 class="text-capitalize darkcolor bottom20">Besoin d'aide ?</h4>
+                        <div class="contact-table colorone d-table bottom15">
+                            <div class="d-table-cell cells">
+                                <span class="icon-cell"><i class="fas fa-mobile-alt"></i></span>
+                            </div>
+                            <div class="d-table-cell cells">
+                                <p class="bottom0">+33 6 69 35 34 27 <span class="d-block">+229 66 18 98 98</span></p>
+                            </div>
+                        </div>
+                        <div class="contact-table colorone d-table bottom15 text-left">
+                            <div class="d-table-cell cells">
+                                <span class="icon-cell"><i class="fas fa-map-marker-alt"></i></span>
+                            </div>
+                            <div class="d-table-cell cells">
+                                <p class="bottom0">Carré 1440 AGONTINKON, COTONOU
+                                    <span class="d-block">REP. BENIN</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-table colorone d-table text-left">
+                            <div class="d-table-cell cells">
+                                <span class="icon-cell"><i class="far fa-clock"></i></span>
+                            </div>
+                            <div class="d-table-cell cells">
+                                <p class="bottom0">Lundi à Samedi- 09:00 à 18:30
+                                    <span class="d-block">Support en ligne : 24H / 24H et 7J / 7J</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="button btnsecondary gradient-btn top30">Télécharger notre brochue</a>
+                    </div>
+                    <!--<div class="col-lg-12 col-md-12" style="padding:0px;">
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link darkcolor" data-toggle="collapse" href="#collapseOne1">Our Mission</a>
+                            </div>
+                            <div id="collapseOne1" class="collapse show" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link darkcolor" data-toggle="collapse" href="#collapseTwo">Our Goals</a>
+                            </div>
+                            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link darkcolor" data-toggle="collapse" href="#collapseThree">Inspections & Occupancy </a>
+                            </div>
+                            <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link darkcolor" data-toggle="collapse" href="#collapseFour">Top Achievements </a>
+                            </div>
+                            <div id="collapseFour" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </section>
+    <!-- Services us ends -->
+    <!-- Contact US -->
+    <section id="stayconnect" class="bglight position-relative ">
+        <div class="container">
+            <div class="contactus-wrapp">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="heading-title wow fadeInUp text-center text-md-left" data-wow-delay="300ms">
+                            <h3 class="darkcolor bottom20">Stay Connected</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <form class="getin_form wow fadeInUp" data-wow-delay="400ms" onsubmit="return false;">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12" id="result"></div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="userName" class="d-none"></label>
+                                        <input class="form-control" type="text" placeholder="First Name:" required id="userName" name="userName">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="companyName" class="d-none"></label>
+                                        <input class="form-control" type="tel" placeholder="Company Name"  id="companyName" name="companyName">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="email" class="d-none"></label>
+                                        <input class="form-control" type="email" placeholder="Email:" required id="email" name="email">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <button type="submit" class="button gradient-btn w-100" id="submit_btn">subscribe</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block javascripts_complements %}
+    <script type="application/javascript" src="/mainJs/EuropOcaz.js"></script>
+{% endblock %}
