@@ -21,7 +21,6 @@ function numdecommande(){
 $('#numcommande').append(numdecommande()+mois+annee);
 
 
-
 /*** FONCTIONS DE VERIFICATION DES SAISIE ***/
 //Gestion des erreurs de saisie
 function erreursaisie(champtexte, validation){
@@ -43,7 +42,6 @@ function validationsaisie(champtexte, validation){
             //champtexte.attr('data-check',validation);
             champtexte.attr({datacheck : validation});
         }
-       
 
 // Fonction de vérification des champs texte alphanumerique
 function AlphaNumverification(champtexte){
@@ -155,7 +153,6 @@ function validerCommande(){
       }
 
 
-
 /*** FONCTIONS MDE GESTIONS DES BOUTONS SUIVANT ET PRECEDENT DU FORMULAIRE ***/
 //Ouverture du formulaire EuropeOcaz
 $('#jeSuis').change(function(){
@@ -226,8 +223,7 @@ function precedent(){
 /*** FONCTIONS MODIFICATION DU FORMULAIRES SELON LES CHOIX SELECT ***/
 //Fonction de validation de services pour les entreprises
 function ValidationFormParticulier(){
-   // alert('paticulier');
- 
+
                   $.post(
                     '/mainPHP/EuropOcazForm.php',
                     {
@@ -255,8 +251,7 @@ function ValidationFormParticulier(){
                         piecepour:$('#piecepour option:selected').text()
                     },
                     function(data){
-                        console.log(data);
-                        alert(data);
+
                     },
                     'text'
                 );
@@ -292,7 +287,7 @@ function ValidationFormEntreprise(){
                         piecepour:$('#piecepour option:selected').text()
                     },
                     function(data){
-                    alert('TDAAAAAA');
+
                     },
                     'text'
                 );
@@ -301,18 +296,19 @@ function ValidationFormEntreprise(){
 
 // Fonction de validation de formulaire
 function ValidationForm(){
-        
         if($('#QueVoulezVous option:selected').val() !=1 && $('#marques').attr('datacheck')==3 && $('#modele').attr('datacheck')==3 && $('#annee').attr('datacheck')==3 && $('#PrixMax').attr('datacheck')==3){
             // && $('#Carburant option:selected').val() !=1
             // Si tous les champs bligatoires ont été rensignés, on passe  la validation d formulaire selon le cas
-            if($('#jeSuis option:selected').val()!=2){
-                 ValidationFormParticulier();
-               }else{
-                 ValidationFormEntreprise();
-               }
-            
-//$('#ChassisMoto option:selected').val() !=1 && 
-              
+            if($('#jeSuis option:selected').val()===2){
+                $('#accordion').attr({action : 'cmdOcazPart'});
+                $('#accordion').submit();
+
+               }else if($('#jeSuis option:selected').val()===3){
+                $('#accordion').attr({action : path('cmdOcazEnt')});
+               }else if($('#jeSuis option:selected').val()===4){
+                $('#accordion').attr({action : path('cmdOcazCom')});
+            }
+
         }else{
            alert('Veuillez vérifier les informations des champs obligatoires (*).');
           }
