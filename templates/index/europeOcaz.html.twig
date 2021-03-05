@@ -112,14 +112,14 @@
                                 </form>
                             </div>-->
                             <div class="col-lg-12 col-md-12">
-                                <form id="accordion" method="post" action="">
+                                <form id="accordion" method="post" action="{{path('cmdEuropOcaz')}}">
                                     <div class="card">
                                         <div class="form-group col-lg-12 col-md-12 formnoborder" style="margin: 0px; padding: 10px;">
                                             <select id="jeSuis" name="jeSuis" class="form-control formnoborder" style="margin: 0px; padding: 0px; background-color:transparent; cursor: pointer;">
                                                 <option value="0">JE SUIS ... </option>
-                                                <option value="1">UN PARTICULIER</option>
-                                                <option value="2">UNE ENTREPRISE</option>
-                                                <option value="3">UN COMMERCANT</option>
+                                                <option value="particulier">UN PARTICULIER</option>
+                                                <option value="entreprise">UNE ENTREPRISE</option>
+                                                <option value="commercant">UN COMMERCANT</option>
                                             </select>
                                             <label for="first_name1" class="d-none"></label>
                                         </div>
