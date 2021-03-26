@@ -65,7 +65,7 @@ jQuery($=> {
             };
 
             //Ajax post data to server
-            $.post('contact.php', postData, function (response) {
+            $.post('mainPHP/contact.php', postData, function (response) {
                 //load json data from server and output message
                 if (response.type === 'error') {
                     output = '<div class="alert-danger" style="padding:10px; margin-bottom:25px;">' + response.text + '</div>';
@@ -81,7 +81,7 @@ jQuery($=> {
             }, 'json');
 
         } else {
-            output = '<div class="alert-danger" style="padding:10px; margin-bottom:25px;">Please provide the missing fields.</div>';
+            output = '<div class="alert-danger" style="padding:10px; margin-bottom:25px;">Vous devez renseigner tous les champs.</div>';
             result.slideUp("fast").html(output).slideDown();
         }
 

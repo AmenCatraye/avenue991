@@ -13,13 +13,8 @@ function numdecommande(){
 
   for (var i = 0; i < 7; i++)
     text += possible.charAt(Math.floor(Math.random() * possible.length));
-
   return text;
 }
-
-//Construction du nemero de commande
-$('#numcommande').append(numdecommande()+mois+annee);
-
 
 /*** FONCTIONS DE VERIFICATION DES SAISIE ***/
 //Gestion des erreurs de saisie
@@ -103,8 +98,6 @@ function Numverification(champtexte){
                             
                             validationsaisie(champtexte,Rep.res); 
                         }
-                      
-                       // alert(champtexte.attr('datacheck'));
                     },
                     'text'
                 );
@@ -126,8 +119,6 @@ function Mailverification(champtexte){
                         }else{
                            validationsaisie(champtexte,Rep.res); 
                         }
-                        
-                        //alert(champtexte.attr('datacheck'));
                     },
                     'text'
                 );
@@ -153,45 +144,74 @@ function validerCommande(){
       }
 
 
-/*** FONCTIONS MDE GESTIONS DES BOUTONS SUIVANT ET PRECEDENT DU FORMULAIRE ***/
+/*** FONCTIONS DE GESTIONS DES BOUTONS SUIVANT ET PRECEDENT DU FORMULAIRE ***/
 //Ouverture du formulaire EuropeOcaz
-$('#jeSuis').change(function(){
-           
-            if ($('#jeSuis option:selected').val()==0){
-                $('#user').empty();
-                $('#collapseOne').hide(300);
-                $('#collapseTwo').hide(300);
-            }else{
-                
-                 $('#collapseOne').show(300);
-                if($('#jeSuis option:selected').val()==1){
-                            $('#user').empty();
-                            $('#user').append('<i class="fas fa-user"></i>');
-                            $('#entreprisesCommercants').hide();
-                            $('#etudiantsParticuliers').show(300);
+function jesuis(){
+    //Construction du nemero de commande
+    $('#numcommande').empty();
+    $('#numcommande').append(numdecommande()+mois+annee);
 
-                }else if($('#jeSuis option:selected').val()==2){
-                            $('#user').empty();
-                            $('#user').append('<i class="fas fa-landmark"></i>');
-                            $('#entreprisesCommercants').show(300);
-                            $('#etudiantsParticuliers').hide();
-                    
-                }else if($('#jeSuis option:selected').val()==3){
-                            $('#user').empty();
-                            $('#user').append('<i class="fas fa-store"></i>');
-                            $('#entreprisesCommercants').show(300);
-                            $('#etudiantsParticuliers').hide();
-                }
-          
-           
-       }})
-       
+    switch ($('option:selected').val()){
+        case 'particulier':
+            $('#professionels strong').removeClass('red');
+            $('#professionels strong').addClass('greyoff');
+
+
+            $('#particulier strong').removeClass('greyoff');
+            $('#particulier strong').addClass('red');
+            $('#collapseprof').hide(300);
+            $('#collapsepart').show(300);
+            break;
+
+        case 'entreprise':
+            $('#professionels strong').removeClass('greyoff');
+            $('#professionels strong').addClass('red');
+
+            $('#particulier strong').removeClass('red');
+            $('#particulier strong').addClass('greyoff');
+
+            $('#collapseprof').show(300);
+            $('#collapsepart').hide(300);
+            break
+
+        case 'commercant':
+            $('#commercant strong').removeClass('greyoff');
+            $('#commercant strong').addClass('red');
+
+            $('#particulier strong').removeClass('red');
+            $('#particulier strong').addClass('greyoff');
+
+            $('#collapseprof').show(300);
+            $('#collapsepart').hide(300);
+            break;
+        case 'choix':
+            $('#ServiceDemande strong').removeClass('red');
+            $('#ServiceDemande strong').addClass('greyoff');
+
+            $('#collapseTwo').hide(300);
+            $('#numcommande').empty();
+
+            $('#particulier strong').removeClass('red');
+            $('#particulier strong').addClass('greyoff');
+
+            $('#professionels strong').removeClass('red');
+            $('#professionels strong').addClass('greyoff');
+
+            $('#collapsepart').hide(300);
+            $('#collapseprof').hide(300);
+            break;
+
+    }
+}
+
        
 //Traitement suivant pour pariculier
 function Suivantparticulier(){
         if($('#nometprenoms').attr('datacheck')==3 && $('#adressemail2').attr('datacheck')==3 && $('#telephone2').attr('datacheck')==3 && $('#adresse2').attr('datacheck')==3){
              $('#collapseOne').hide(300);
              $('#collapseTwo').show(300);
+            $('#ServiceDemande strong').removeClass('greyoff');
+            $('#ServiceDemande strong').addClass('red');
               
         }else{
            alert('Veuillez vérifiez les informations saisies et recommencer.');
@@ -205,6 +225,8 @@ function SuivantentrepriseCommercant(){
         if($('#raisonsociale').attr('datacheck')==3 && $('#adressemail1').attr('datacheck')==3 && $('#telephone1').attr('datacheck')==3 && $('#adresse1').attr('datacheck')==3 && $('#personnescontact').attr('datacheck')==3){
              $('#collapseOne').hide(300);
              $('#collapseTwo').show(300);
+             $('#ServiceDemande strong').removeClass('greyoff');
+             $('#ServiceDemande strong').addClass('red');
           }else{
            alert('Veuillez vérifiez les informations saisies et recommencer.');
           }
@@ -215,6 +237,8 @@ function SuivantentrepriseCommercant(){
 function precedent(){
            $('#collapseOne').show(300);
            $('#collapseTwo').hide(300);
+           $('#ServiceDemande strong').removeClass('red');
+           $('#ServiceDemande strong').addClass('greyoff');
        }
 
 
@@ -222,7 +246,8 @@ function precedent(){
 
 /*** FONCTIONS MODIFICATION DU FORMULAIRES SELON LES CHOIX SELECT ***/
 //Fonction de validation de services pour les entreprises
-function ValidationFormParticulier(){
+
+/*function ValidationFormParticulier(){
 
                   $.post(
                     '/mainPHP/EuropOcazForm.php',
@@ -255,11 +280,11 @@ function ValidationFormParticulier(){
                     },
                     'text'
                 );
-}
+}*/
 
 
 //Fonction de validation de services pour les entreprises
-function ValidationFormEntreprise(){
+/*function ValidationFormEntreprise(){
                   $.post(
                     '/mainPHP/EuropOcazForm.php',
                     {
@@ -291,7 +316,7 @@ function ValidationFormEntreprise(){
                     },
                     'text'
                 );
-}
+}*/
     
 
 // Fonction de validation de formulaire
@@ -299,7 +324,7 @@ function ValidationForm(){
         if($('#QueVoulezVous option:selected').val() !=1 && $('#marques').attr('datacheck')==3 && $('#modele').attr('datacheck')==3 && $('#annee').attr('datacheck')==3 && $('#PrixMax').attr('datacheck')==3){
             // && $('#Carburant option:selected').val() !=1
             // Si tous les champs bligatoires ont été rensignés, on passe  la validation d formulaire selon le cas
-          /*  if($('#jeSuis option:selected').val()===2){
+            if($('#jeSuis option:selected').val()===2){
                 var route = "{{ path('cmdOcazPart', {'slug': 'cmdOcazPart'})|escape('js') }}";
                 $('#accordion').attr({action : route});
 
@@ -308,7 +333,7 @@ function ValidationForm(){
                 $('#accordion').attr({action : path('cmdOcazEnt')});
                }else if($('#jeSuis option:selected').val()===4){
                 $('#accordion').attr({action : path('cmdOcazCom')});
-            }*/
+            }
 
             $('#accordion').submit();
 
@@ -354,6 +379,7 @@ function piecedetache(){
            
            $('#piecepour option:selected').val()=='';
            $('#div_piecepour').hide(300);
+
        }else if($('#QueVoulezVous option:selected').val()==2){
            $('#div_NbrPortes').show(300);
            

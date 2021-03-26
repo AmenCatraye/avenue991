@@ -1,0 +1,166 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Très bientôt sur AVENUE991.COM{% endblock %}
+
+{% block body %}
+    <!-- header -->
+    <!--Page Header-->
+    <section id="main-banner-page" class="position-relative page-header coming-soon-header parallax section-nav-smooth">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="page-titles whitecolor padding_half">
+                        <h1 class="font-light coming-soon-heading">Très bientôt</h1>
+                        <div class=" wow bounceIn pt-4 pb-5" data-wow-delay="300ms">
+                           <!-- <ul class="count_down white alt-font">
+                                <li>
+                                    <p class="days">00</p>
+                                    <p class="days_ref">Jours</p>
+                                </li>
+                                <li>
+                                    <p class="hours">00</p>
+                                    <p class="hours_ref">Heures</p>
+                                </li>
+                                <li>
+                                    <p class="minutes">00</p>
+                                    <p class="minutes_ref">Minutes</p>
+                                </li>
+                                <li>
+                                    <p class="seconds">00</p>
+                                    <p class="seconds_ref">Secondes</p>
+                                </li>
+                            </ul> -->
+                        </div>
+                        <h3 class="font-light">Cette page sera bientôt prête.</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="gradient-bg title-wrap">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 whitecolor">
+                        <h3 class="float-left">Arrive très bientôt</h3>
+                        <ul class="breadcrumb top10 bottom10 float-right">
+                            <li class="breadcrumb-item hover-light"><a href="{{ path('Accueil') }}">Accueil</a></li>
+                            <li class="breadcrumb-item hover-light">ArriveBientôt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Page Header ends -->
+    <!-- Contact US -->
+    <section id="stayconnect1" class="bglight position-relative padding">
+        <div class="container whitebox">
+            <div class="widget bottom40">
+                <div class="row">
+                    <div class="col-md-12 text-center wow fadeIn mt-n3" data-wow-delay="300ms">
+                        <h2 class="heading bottom30 darkcolor font-light2">Des <span class="font-normal">Questions ?</span>
+                            <span class="divider-center"></span>
+                        </h2>
+                        <div class="col-md-8 offset-md-2 bottom35">
+                            <p class="roundedElegance">Avez-vous des questions ? Ecrivez-nous en attendant la mise en ligne de votre page.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 order-sm-2">
+                        <div class="contact-meta text-center text-md-left">
+                            <div class="heading-title">
+                                <span class="defaultcolor mb-3 red">Avenue991.com</span>
+                                <h2 class="darkcolor font-normal mb-4"><span class="d-none d-md-inline-block">Notre</span> Support <span class="d-none d-md-inline-block">en ligne.</span></h2>
+                            </div>
+                            <p class="bottom10">FRANCE</p>
+                            <p class="bottom10">+33 6 69 35 34 27</p>
+                            <p class="bottom10"><a href="mailto:polpo@synxagency.co.au">contact@avenue991.com</a></p>
+                            <p class="bottom10">LUNDI - DIMANCHE: 24H/24 - 7J/7</p>
+                            <ul class="social-icons mt-4 mb-4 mb-sm-0 wow fadeInUp" data-wow-delay="300ms">
+                                <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i> </a> </li>
+                                <li><a href="javascript:void(0)"><i class="fab fa-twitter"></i> </a> </li>
+                                <li><a href="javascript:void(0)"><i class="fab fa-linkedin-in"></i> </a> </li>
+                                <li><a href="javascript:void(0)"><i class="fab fa-instagram"></i> </a> </li>
+                                <li><a href="javascript:void(0)"><i class="fab fa-whatsapp"></i> </a> </li>
+                                <li><a href="javascript:void(0)"><i class="far fa-envelope"></i> </a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="heading-title wow fadeInUp" data-wow-delay="300ms">
+                            <form class="getin_form wow fadeInUp" data-wow-delay="400ms" onsubmit="return false;">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12" id="result1"></div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="name1" class="d-none"></label>
+                                            <input class="form-control" id="name1" type="text" placeholder="Nom & Prénom:" required  name="userName">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="email1" class="d-none"></label>
+                                            <input class="form-control" type="email" id="tel1" placeholder="Téléphone :" name="tel">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="email1" class="d-none"></label>
+                                            <input class="form-control" type="email" id="email1" placeholder="Adresse mail:" name="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-group">
+                                            <label for="message1" class="d-none"></label>
+                                            <textarea class="form-control" id="message1" placeholder="Message:" required  name="message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <button type="submit" id="submit_btn1" class="button gradient-btn w-100">ENVOYER</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="widget text-center w-100">
+                        <div class="contact-box">
+                            <span class="icon-contact defaultcolor"><i class="fas fa-mobile-alt red"></i></span>
+                            <p class="bottom0"><a href="tel:+14046000396">+229 66 18 98 98</a></p>
+                            <p class="d-block"><a href="tel:+43720778972">+33 6 69 35 34 27</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="widget text-center w-100">
+                        <div class="contact-box">
+                            <span class="icon-contact defaultcolor"><i class="fas fa-map-marker-alt red"></i></span>
+                            <p class="bottom0">REP.BENIN COTONOU </p>
+                            <p class="d-block">FRANCE - PONTOISE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex">
+                    <div class="widget text-center w-100">
+                        <div class="contact-box">
+                            <span class="icon-contact defaultcolor"><i class="far fa-envelope red"></i></span>
+                            <p class="bottom0"><a href="mailto:admin@website.com">amen.catraye@avenue991.com</a></p>
+                            <p class="d-block"><a href="mailto:email@website.com">contact@avenue991.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 d-flex">
+                    <div class="widget text-center w-100">
+                        <div class="contact-box">
+                            <span class="icon-contact defaultcolor"><i class="far fa-clock red"></i></span>
+                            <p class="bottom0">24H / 24 <span class="d-block">7J / 7</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact US ends -->
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

@@ -24,7 +24,7 @@ function AlphaNumverification($x){
     $verifTexte = New stdClass;
 
     //Si Champ vide
-    if ($x=='' || !preg_match("/^[a-zA-Z-0-9]*$/",$x)) {
+    if ($x=='' || !preg_match("/^[a-zA-Z-0-9_;:. .,-]*$/",$x)) {
         $verifTexte -> res = 2;
     }
      //Si tout est ok
@@ -41,7 +41,7 @@ function AlphaNumverification($x){
 
 function Alphaverification($x){
     $verifTexte = New stdClass;
-    if ($x=='' || !preg_match("/^[a-zA-Z]*$/",$x)) {
+    if ($x=='' || !preg_match("/^[a-zA-Z_;:. .,-]*$/",$x)) {
         $verifTexte -> res = 2;
     }
      //Si tout est ok

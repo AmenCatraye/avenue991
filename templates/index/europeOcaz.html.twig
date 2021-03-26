@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Achat Europe-Ocaz{% endblock %}
+{% block title %}Véhicule d'Occasion{% endblock %}
 {% block stylesheets %}
     <style>
         .padding0px{
@@ -32,8 +32,8 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="page-titles whitecolor text-center padding_top padding_bottom">
-                        <h2 class="font-xlight" style="font-size: 4em; font-family: Rambler;">Bienvenus sur </h2>
-                        <h1 class="font-bold" >EUROPE-OCAZ</h1>
+                        <h1 class="font-xlight" style="font-size:5em; font-family: Rambler;">Véhicules d'occasion </h1>
+                        <!--<h1 class="font-bold lemonmilk_R" >AVENUE 991</h1>-->
                         <!--<h2 class="font-xlight">&</h2>
                         <h1 class="font-light pt-2" style="font-size: 1.5em;">Pièces détachées neuves ou d'occasion.</h1>-->
                     </div>
@@ -42,7 +42,7 @@
             <div class="gradient-bg title-wrap">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 whitecolor">
-                        <h3 class="float-left" style="font-size: 4em; font-family: Rambler;">Europe-ocaz</h3>
+                        <h3 class="float-left roundedElegance" style="">Véhicule d'occasion</h3>
                         <ul class="breadcrumb top10 bottom10 float-right">
                             <li class="breadcrumb-item hover-light"><a href="index.html">Accueil</a></li>
                             <li class="breadcrumb-item hover-light">Formulaire de demande</li>
@@ -115,26 +115,26 @@
                                 <form id="accordion" method="post" action="{{path('cmdEuropOcaz')}}">
                                     <div class="card">
                                         <div class="form-group col-lg-12 col-md-12 formnoborder" style="margin: 0px; padding: 10px;">
-                                            <select id="jeSuis" name="jeSuis" class="form-control formnoborder" style="margin: 0px; padding: 0px; background-color:transparent; cursor: pointer;">
-                                                <option value="0">JE SUIS ... </option>
-                                                <option value="particulier">UN PARTICULIER</option>
-                                                <option value="entreprise">UNE ENTREPRISE</option>
-                                                <option value="commercant">UN COMMERCANT</option>
+                                            <select id="jeSuis" name="jeSuis" class="form-control formnoborder" style="margin: 0px; padding: 0px; background-color:transparent; cursor: pointer;" onchange="jesuis($(this));">
+                                                <option value="choix">Faire un choix pour commencer ... </option>
+                                                <option value="particulier">PARTICULIER</option>
+                                                <option value="entreprise">ENTREPRISE</option>
+                                                <option value="commercant">COMMERCANT</option>
                                             </select>
                                             <label for="first_name1" class="d-none"></label>
                                         </div>
                                     </div>
 
-                                    <div class="card">
+                                   <!-- <div class="card">
                                         <div class="card-header">
                                             <a class="card-link darkcolor" data-toggle="collapse" href="#"><span id="user"></span> GENERALIT&Eacute;S</a>
                                         </div>
                                         <div id="collapseOne" class="collapse" data-parent="#accordion">
 
-                                            <!--<div id="entreprisesCommercants" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap; display: none;">
+                                           <div id="entreprisesCommercants" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap; display: none;">
 
 
-                                                </div>-->
+                                                </div>
 
 
 
@@ -165,7 +165,7 @@
                                                     <input class="form-control formnoborderbottom" type="text" placeholder="" id="personnescontact" name="personnescontact" maxlength="32" datacheck="" onfocusout="Alphaverification($(this));">
                                                     <span class="formIncice">Saisir les noms des personnes à contacter, séparées par un tiret. <span class="sizelabel">(32)</span></span><span class="formIncice"></span>
                                                 </div>
-                                                <!-- <span type="" class="button gradient-btn w-100" id="" onclick="validerCommande();" style="cursor: pointer;">suivant</span>-->
+
                                                 <p class="col-lg-12 alignRigth">
                                                     <span class="suivant button w-100" onclick="SuivantentrepriseCommercant();">Suivant <i class="fas fa-chevron-circle-right"></i></span>
                                                 </p>
@@ -194,7 +194,7 @@
                                                     <span class="formIncice">Adresse de résidence (carré - maison - quartier) <span class="sizelabel">(200)</span></span><span class="formIncice"></span>
                                                 </div>
                                                 <div class="col-md-6 col-sm-6">
-                                                    <!-- <span type="" class="button gradient-btn w-100" id="" onclick="validerCommande();" style="cursor: pointer;">suivant</span> -->
+
 
                                                 </div>
                                                 <p class="col-lg-12 alignRigth">
@@ -203,13 +203,94 @@
                                             </div>
 
                                         </div>
+                                    </div>-->
+
+
+                                    <div class="card" id="sessionProfessionnels">
+                                        <div class="card-header">
+                                            <a id="professionels"  class="card-link" data-toggle="collapse" href="#"><strong class="greyoff roundedElegance">JE SUIS UN PROFESSIONNEL</strong></a>
+                                        </div>
+                                        <div id="collapseprof" class="collapse" data-parent="#accordion">
+                                        <div class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                            <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                <input class="form-control colorme formnoborderbottom" type="text" placeholder="" id="raisonsociale" name="raisonsociale" onfocusout="AlphaNumverification($(this));" maxlength="32" datacheck="">
+                                                <span class="formIncice">Raison sociale <sup>(32)</sup></span> &ensp; <sup></sup>
+                                            </div>
+
+                                            <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                <input class="form-control formnoborderbottom" type="text" placeholder="" id="adressemail1" name="adressemail1" onfocusout="Mailverification($(this));" maxlength="32" datacheck="">
+                                                <span class="formIncice">Adresse-mail <sup>(64)</sup></span> &ensp; <sup></sup>
+                                            </div>
+
+                                            <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                <input class="form-control formnoborderbottom" type="text" placeholder="" id="telephone1" name="telephone1" style="" onfocusout="Numverification($(this));" maxlength="16" datacheck="">
+                                                <span class="formIncice">Téléphone <sup>(16)</sup></span> &ensp; <sup></sup>
+                                            </div>
+
+                                            <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                <input class="form-control formnoborderbottom" type="text" placeholder="" id="adresse1" name="adresse1" onfocusout="AlphaNumverification($(this));" maxlength="200" datacheck="">
+                                                <span class="formIncice">Adresse physique <sup>(200)</sup></span> &ensp; <sup></sup>
+
+                                            </div>
+
+                                            <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                <input class="form-control formnoborderbottom" type="text" placeholder="" id="personnescontact" name="personnescontact" maxlength="32" datacheck="" onfocusout="Alphaverification($(this));">
+                                                <span class="formIncice">Saisir les noms des personnes à contacter, séparées par un tiret. <sup >(32)</sup></span> &ensp; <sup></sup>
+                                            </div>
+                                            <!-- <span type="" class="button gradient-btn w-100" id="" onclick="validerCommande();" style="cursor: pointer;">suivant</span>-->
+                                            <p class="col-lg-12 alignRigth">
+                                                <span class="suivant button f_right" onclick="SuivantentrepriseCommercant();">Suivant <i class="fas fa-chevron-circle-right"></i></span>
+                                            </p>
+
+                                        </div>
+                                        </div>
+
                                     </div>
+                                    <div class="card" id="sessionParticulier">
+                                        <div class="card-header">
+                                            <a id="particulier"  class="card-link darkcolor" data-toggle="collapse" href="#"><strong class="greyoff roundedElegance">JE SUIS UN PARTICULIER</strong></a>
+                                        </div>
+                                        <div id="collapsepart" class="collapse" data-parent="#accordion">
+                                            <div class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="nometprenoms" name="nometprenoms"  onfocusout="Alphaverification($(this));" datacheck="">
+                                                    <span class="formIncice">Noms & Prénoms (même format que sur la pièce d'identité) <sup>(32)</sup></span> &ensp; <sup></sup>
+
+                                                </div>
+
+                                                <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="adressemail2" name="adressemail2" onfocusout="Mailverification($(this));" datacheck="">
+                                                    <span class="formIncice">Adresse mail <sup>(64)</sup></span> &ensp; <sup></sup>
+                                                </div>
+
+                                                <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="telephone2" name="telephone2" onfocusout="Numverification($(this));" datacheck="">
+                                                    <span class="formIncice">Téléphone (Whatsapp) <sup>(16)</sup></span> &ensp; <sup></sup>
+                                                </div>
+
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder=""  id="adresse2" name="adresse2" onfocusout="AlphaNumverification($(this));" datacheck="">
+                                                    <span class="formIncice">Adresse de résidence (carré - maison - quartier) <sup>(200)</sup></span> &ensp; <sup></sup>
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <!-- <span type="" class="button gradient-btn w-100" id="" onclick="validerCommande();" style="cursor: pointer;">suivant</span> -->
+
+                                                </div>
+                                                <p class="col-lg-12">
+                                                    <span class="suivant pointer f_right" onclick="Suivantparticulier();">Suivant <i class="fas fa-chevron-circle-right"></i></span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
 
                                     <div class="card">
                                         <div class="card-header">
-                                            <a id="ServiceDemande"  class="card-link darkcolor" data-toggle="collapse" href="#">D&Eacute;TAILS DU SERVICE <span> - COMMANDE N°</span><strong id="numcommande" name="numcommande"></strong></a>
+                                            <a id="ServiceDemande"  class="card-link" data-toggle="collapse" href="#"><strong class="greyoff roundedElegance">DETAILS DE MA DEMANDE - N°</strong> <strong class="red" id="numcommande" name="numcommande"></strong></a>
                                         </div>
-                                        <div id="collapseTwo" class="collapse show" data-parent="#accordion">
+                                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
                                             <div id="DetailServices" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
                                                 <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_qvv">
                                                     <select id="QueVoulezVous" name="QueVoulezVous" class="form-control formnoborderbottom" onchange="piecedetache();">
@@ -511,48 +592,6 @@
         </div>
     </section>
     <!-- Services us ends -->
-    <!-- Contact US -->
-    <section id="stayconnect" class="bglight position-relative ">
-        <div class="container">
-            <div class="contactus-wrapp">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                        <div class="heading-title wow fadeInUp text-center text-md-left" data-wow-delay="300ms">
-                            <h3 class="darkcolor bottom20">Stay Connected</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-12 col-sm-12">
-                        <form class="getin_form wow fadeInUp" data-wow-delay="400ms" onsubmit="return false;">
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12" id="result"></div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="form-group">
-                                        <label for="userName" class="d-none"></label>
-                                        <input class="form-control" type="text" placeholder="First Name:" required id="userName" name="userName">
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="form-group">
-                                        <label for="companyName" class="d-none"></label>
-                                        <input class="form-control" type="tel" placeholder="Company Name"  id="companyName" name="companyName">
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="form-group">
-                                        <label for="email" class="d-none"></label>
-                                        <input class="form-control" type="email" placeholder="Email:" required id="email" name="email">
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-6">
-                                    <button type="submit" class="button gradient-btn w-100" id="submit_btn">subscribe</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 {% endblock %}
 {% block javascripts_complements %}
     <script type="application/javascript" src="/mainJs/EuropOcaz.js"></script>

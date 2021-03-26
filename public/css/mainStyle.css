@@ -1,14 +1,63 @@
 
+/*ROUNDELEGENCE*/
 @font-face {
-	font-family: "CODE_Bold.otf";
-	src: url('polices/CODE_Bold.otf');
+    font-family: "RoundedElegance";
+    src: url('../webfonts/polices/RoundedElegance.ttf');
 }
 
+/*LEMONMIL MEDIUM */
+@font-face {
+    font-family: "LEMONMILKMEDIUM";
+    src: url('../webfonts/polices/LEMONMILK-Medium.otf');
+}
+
+
+/*LEMONMIL MEDIUM */
+@font-face {
+    font-family: "LEMONMILKMEDIUM";
+    src: url('../webfonts/polices/LEMONMILK-Regular.otf');
+}
+
+
+/*LEMONMIL REGULAR */
+@font-face {
+    font-family: "LEMONMILKRegular";
+    src: url('../webfonts/polices/LEMONMILK-Regular.otf');
+}
+
+/* LEMONMILK-Light */
+@font-face {
+    font-family: "LEMONMILK-Light";
+    src: url('../webfonts/polices/LEMONMILK-Light.otf');
+}
+
+/* RAMBLER */
 @font-face {
 	font-family: "Rambler";
 	src: url('../webfonts/polices/Rambler.ttf');
 }
 
+/* RAMBLER */
+@font-face {
+    font-family: "Rambler";
+    src: url('../webfonts/polices/Rambler.ttf');
+}
+
+.roundedElegance{
+    font-family: "RoundedElegance";
+}
+
+.lemonmilk_M{
+    font-family:"LEMONMILKMEDIUM" ;
+}
+
+.lemonmilk_R{
+    font-family:"LEMONMILKRegular" ;
+}
+
+.lemonmilk_L{
+    font-family:"LEMONMILK-Light" ;
+}
 /*
 @font-face {
 	font-family: "KeepCalm_Medium.ttf";
@@ -20,18 +69,120 @@
 #QuiEtesVous{
     cursor: pointer;
 }
+.flexBcenter{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+.checkBlabel{
+    margin: 4px 0px 0px 10px;
+}
+.checkBox{
+    margin-top: 5px;
+    height: 30px;
+    width: 30px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.centerCheckB{
+    flex: content;
+    text-align: center;
+}
+.centerCheckB input{
+    margin-top: 10px;
+}
+.minus{
+    text-transform: lowercase;
+}
+.flexStart{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+.borderoff{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f2f2f2;
+}
+.noshow{
+    display: none;
+}
+.sizeSt{
+    font-size: 1.5em;
+}
+.white{
+    color: white;
+}
+.padding50{
+    padding: 50px;
+}
+.padding30{
+    padding: 30px;
+}
+.suivant{
+    color: #f2f2f2;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f2f2f2;
+}
+.suivant:hover{
+    color: #CD0016;
+    border-color: #CD0016;
+}
+.teamimg{
+    width: 60px;
+    height: 60px;
+}
+.texton{
+    color:#CD0016;
+}
+.fsize25{
+    font-size: 40px;
+}
+.red{
+    color: #CD0016;
+}
+.greytitle{
+    color: #6D6D6D;
+}
+.greyoff{
+    color: #f2f2f2;
+}
 .rambler{
     font-family: "Rambler";
 }
 .formnoborderbottom{
     border-width: 0px 0px 1px 0px; border-radius: 0px;
 }
-
+.pointer{
+    cursor: pointer;
+}
 .formnoborder{
   border:none;
 }
+
+.f_right{
+    float: right;
+}
+.alignright{
+    text-align: right;
+}
 .alignleft{
     text-align: left;
+}
+.marginL10{
+    margin-left: 10px;
+}
+.marginR10{
+    margin-right: 10px;
+}
+.marginRadio{
+    margin: 5px 0px 0px 10px;
+}
+.BgreyF2{
+    background-color: #F2F2F2;
 }
 .padding0{
     padding: 0px;

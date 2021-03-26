@@ -1,0 +1,1093 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Shopping et autres courses{% endblock %}
+{% block stylesheets %}
+    <style>
+        .padding0px{
+            padding: 0px;
+        }
+
+        .margin0px{
+            margin: 0px;
+        }
+
+    </style>
+{% endblock %}
+
+{% block body %}
+    <!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="cssload-loader"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+
+    <!--Page Header-->
+    <section id="main-banner-page" class="position-relative page-header service-detail-header section-nav-smooth parallax">
+        <div class="overlay overlay-dark opacity-7 z-index-1" style="margin-top: -25px;"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="page-titles whitecolor text-center padding_top padding_bottom">
+                        <h1 class="font-xlight" style="font-size:5em; font-family: Rambler;">Shopping et autres courses... </h1>
+                        <span class="lemonmilk_M sizeSt">La Team-991 s'occupe de vos besoins.</span><br>
+                        <span class="roundedElegance sizeSt">Prenez enfin du temps libre pour vous.</span>
+                        <!--<h1 class="font-bold lemonmilk_R" >AVENUE 991</h1>-->
+                        <!--<h2 class="font-xlight">&</h2>
+                        <h1 class="font-light pt-2" style="font-size: 1.5em;">Pièces détachées neuves ou d'occasion.</h1>-->
+                    </div>
+                </div>
+            </div>
+            <div class="gradient-bg title-wrap">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 whitecolor">
+                        <h3 class="float-left roundedElegance" style="">Shopping et autres courses</h3>
+                        <ul class="breadcrumb top10 bottom10 float-right">
+                            <li class="breadcrumb-item hover-light"><a href="index.html">Accueil</a></li>
+                            <li class="breadcrumb-item hover-light">Formulaire de demande</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Page Header ends -->
+
+
+    <!-- Services us -->
+    <section id="our-services" class="padding bglight">
+        <div class="container">
+            <div class="row whitebox top15">
+                <div class="col-lg-8 col-md-7">
+                    <div class="widget heading_space text-center text-md-left">
+                        <!--<h1 class="darkcolor font-normal bottom30" style="font-size: 1.5em;">VEHICULES D'OCCASION & PIECES DETACHEES</h1>-->
+                        <!-- <p class="bottom30" style="text-align: center;">Cette page vous permet de formuler votre demande de service en moins de 3 minutes. <br>N'hésitez plus, nous t'attendons plus que vous.</p>-->
+
+                        <!--  <p class="bottom30">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>-->
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <form id="accordion" method="post" action="{{path('cmdEuropOcaz')}}">
+
+                                    <input type='text' value="" id="profilClientSelect" class="noshow">
+                                    <div id="jeSuis" class="flexStart" style="margin-bottom: 15px;">
+                                        <p class="col-lg-12 alignleft"> <strong>MON PROFIL :</strong></p>
+                                        <div class="col-lg-4 col-md-4 padding0 flexStart">
+                                        <input class="checkBox" type="radio" id="etudiant" name="gender" value="etudiant" onclick="profilSelect($(this));">
+                                        <label for="etudiant" class="pointer marginRadio"><i class="fas fa-user-graduate"></i> ETUDIANT </label>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding0 flexStart">
+                                        <input class="checkBox" type="radio" id="particulier" name="gender" value="particulier" onclick="profilSelect($(this));">
+                                        <label for="particulier" class="pointer marginRadio"><i class="fas fa-user"></i> PARTICULIER </label>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding0 flexStart">
+                                        <input class="checkBox" type="radio" id="professionnel" name="gender" value="professionnel" onclick="profilSelect($(this));">
+                                        <label for="professionnel" class="pointer marginRadio"><i class="fas fa-user-tie"></i> PROFESSIONNEL</label>
+                                        </div>
+<!--
+
+                                            <input class="checkBox" type="radio" placeholder=""id="avenirhebergement" name="avenirhebergement"  onclick="profilClient($(this));" datacheck="" maxlength="5">
+                                            <label for="avenirhebergement" class="checkBlabel pointer"><i class="fas fa-bed"></i> HEBERGEMENT</label>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding0 flexBcenter">
+                                            <input class="checkBox" type="radio" id="avenirAVI" name="avenirAVI"  onfocusout="a_venir($(this));">
+                                            <label for="avenirAVI" class="checkBlabel pointer"><i class="fas fa-wallet"></i> GARANT - A.V.I</label>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 padding0 flexBcenter">
+                                            <input class="checkBox" type="radio" placeholder=""id="avenirtrsansport" name="avenirtransport"  onfocusout="a_venir($(this));" datacheck="" maxlength="5">
+                                            <label for="avenirtrsansport" class="checkBlabel pointer"><i class="fas fa-taxi"></i> TRANSPORT </label>
+                                        </div>-->
+                                    </div>
+                                   <!-- <div class="card">
+                                        <div class="form-group col-lg-12 col-md-12 formnoborder" style="margin: 0px; padding: 10px;">
+                                            <select id="jeSuis" name="jeSuis" class="form-control formnoborder" style="margin: 0px; padding: 0px; background-color:transparent; cursor: pointer;" onchange="jesuis($(this));">
+                                                <option value="choix">CHOISIR VOTRE PROFIL ... </option>
+                                                <option value="etudiant">ETUDIANT</option>
+                                                <option value="particulier">PARTICULIER</option>
+                                                <option value="entreprise">ENTREPRISE</option>
+                                                <option value="commercant">COMMERCANT</option>
+                                            </select>
+                                            <label for="first_name1" class="d-none"></label>
+                                        </div>
+                                    </div>-->
+
+                                    <div class="card noshow" id="sessionProfessionnels">
+                                        <div class="card-header">
+                                            <a id="professionels"  class="card-link" data-toggle="collapse" href="#"><strong class="red roundedElegance">JE SUIS UN PROFESSIONNEL</strong></a>
+                                        </div>
+                                        <div id="collapseprof" class="collapse" data-parent="#accordion">
+                                            <div class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                    <input class="form-control colorme formnoborderbottom" type="text" placeholder="" id="raisonsociale" name="raisonsociale" onfocusout="AlphaNumverification($(this));" maxlength="32" datacheck="">
+                                                    <span class="formIncice">Raison sociale <sup>(32)</sup></span> &ensp; <sup></sup>
+                                                </div>
+
+                                                <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="adressemail1" name="adressemail1" onfocusout="Mailverification($(this));" maxlength="32" datacheck="">
+                                                    <span class="formIncice">Adresse-mail <sup>(64)</sup></span> &ensp; <sup></sup>
+                                                </div>
+
+                                                <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="telephone1" name="telephone1" style="" onfocusout="Numverification($(this));" maxlength="16" datacheck="">
+                                                    <span class="formIncice">Téléphone <sup>(16)</sup></span> &ensp; <sup></sup>
+                                                </div>
+
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="adresse1" name="adresse1" onfocusout="AlphaNumverification($(this));" maxlength="200" datacheck="">
+                                                    <span class="formIncice">Adresse physique <sup>(200)</sup></span> &ensp; <sup></sup>
+
+                                                </div>
+
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="personnescontact" name="personnescontact" maxlength="32" datacheck="" onfocusout="Alphaverification($(this));">
+                                                    <span class="formIncice">Saisir les noms des personnes à contacter, séparées par un tiret. <sup >(32)</sup></span> &ensp; <sup></sup>
+                                                </div>
+                                                <!-- <span type="" class="button gradient-btn w-100" id="" onclick="validerCommande();" style="cursor: pointer;">suivant</span>-->
+                                                <p class="col-lg-12 alignRigth">
+                                                    <span type="submit" class="suivant button f_right" id="" onclick="precedent()"> Suivant <i class="fas fa-chevron-circle-right"></i></span>
+                                                </p>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="card noshow" id="sessionParticulier">
+                                        <div class="card-header">
+                                            <a id="particulier"  class="card-link darkcolor" data-toggle="collapse" href="#"><strong class="red roundedElegance">JE SUIS UN PARTICULIER</strong></a>
+                                        </div>
+                                        <div id="collapsepart" class="collapse" data-parent="#accordion">
+                                            <div class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="nometprenoms" name="nometprenoms"  onfocusout="Alphaverification($(this));" datacheck="">
+                                                    <span class="formIncice">Noms & Prénoms (même format que sur la pièce d'identité) <sup>(32)</sup></span> &ensp; <sup></sup>
+
+                                                </div>
+
+                                                <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="adressemail2" name="adressemail2" onfocusout="Mailverification($(this));" datacheck="">
+                                                    <span class="formIncice">Adresse mail <sup>(64)</sup></span> &ensp; <sup></sup>
+                                                </div>
+
+                                                <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="telephone2" name="telephone2" onfocusout="Numverification($(this));" datacheck="">
+                                                    <span class="formIncice">Téléphone (Whatsapp) <sup>(16)</sup></span> &ensp; <sup></sup>
+                                                </div>
+
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder=""  id="adresse2" name="adresse2" onfocusout="AlphaNumverification($(this));" datacheck="">
+                                                    <span class="formIncice">Adresse de résidence (carré - maison - quartier) <sup>(200)</sup></span> &ensp; <sup></sup>
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <!-- <span type="" class="button gradient-btn w-100" id="" onclick="validerCommande();" style="cursor: pointer;">suivant</span> -->
+
+                                                </div>
+                                                <p class="col-lg-12">
+                                                    <span type="submit" class="suivant button f_right" id="" onclick="precedent()"> Suivant <i class="fas fa-chevron-circle-right"></i></span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="card noshow" id="sessionEtudiant">
+                                        <div class="card-header">
+                                            <a id="etudiant"  class="card-link darkcolor" data-toggle="collapse" href="#"><strong class="red roundedElegance">JE SUIS UN ETUDIANT</strong></a>
+                                        </div>
+                                        <div id="collapseetude" class="collapse" data-parent="#accordion">
+                                            <div class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="nometprenoms3" name="nometprenoms3"  onfocusout="Alphaverification($(this));" datacheck="">
+                                                    <span class="formIncice">Noms & Prénoms (même format que sur la pièce d'identité) <sup>(32)</sup></span> &ensp; <sup></sup>
+                                                </div>
+
+                                                <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="adressemail3" name="adressemail3" onfocusout="Mailverification($(this));" datacheck="">
+                                                    <span class="formIncice">Adresse mail <sup>(64)</sup></span> &ensp; <sup></sup>
+                                                </div>
+
+                                                <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder="" id="telephone3" name="telephone3" onfocusout="Numverification($(this));" datacheck="">
+                                                    <span class="formIncice">Téléphone (Whatsapp) <sup>(16)</sup></span> &ensp; <sup></sup>
+                                                </div>
+
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                    <input class="form-control formnoborderbottom" type="text" placeholder=""  id="adresse3" name="adresse3" onfocusout="AlphaNumverification($(this));" datacheck="">
+                                                    <span class="formIncice">Adresse de résidence (carré - maison - quartier) <sup>(200)</sup></span> &ensp; <sup></sup>
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <!-- <span type="" class="button gradient-btn w-100" id="" onclick="validerCommande();" style="cursor: pointer;">suivant</span> -->
+
+                                                </div>
+                                                <p class="col-lg-12">
+                                                    <!--<span class="suivant pointer f_right" onclick="Suivantetudiant();">Suivant <i class="fas fa-chevron-circle-right"></i></span>-->
+
+                                                    <span type="submit" class="suivant button f_right" id="" onclick="Suivantetudiant()"> Suivant <i class="fas fa-chevron-circle-right"></i></span>
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <a id="ServiceDemande"  class="card-link" data-toggle="collapse" href="#"><strong id="monservicedemande" class="greyoff roundedElegance">DETAILS DE MA DEMANDE - N°</strong> <strong class="red" id="numcommande" name="numcommande"></strong></a>
+                                        </div>
+
+                                        <!--CHOIX DES SERVICES -->
+                                        <div id="servicesListe" class="" data-parent="">
+
+                                            <div id="" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0" id="div_QvvEtufiant">
+                                                    <select id="QvvClient" name="QvvClient" class="form-control formnoborderbottom" onchange="serviceDemande($(this));">
+                                                        <option value="zero"></option>
+                                                        <option value="inscription">Inscription universitaire</option>
+                                                        <option value="2">Hébergement</option>
+                                                        <option value="3">Attestation de Virement Irrévocable (AVI)</option>
+                                                        <option value="4">Déplacement aéroport -> logement</option>
+                                                        <option value="5">SOS Etudiant en détresse (intégration)</option>
+                                                        <option value="6">Formalité administrative</option>
+                                                        <option value="7">Autres</option>
+                                                    </select>
+                                                    <span class="formIncice"><sup class="colorstar">*</sup><i class="fas fa-question-circle"></i> Que voulez-vous ?</span><span class="formIncice"></span>
+                                                </div>
+
+                                              <!--  <div class="form-group col-lg-12 col-md-12 alignleft padding0" id="div_QvvParticulier">
+                                                    <select id="QvvParticulier" name="QvvParticulier" class="form-control formnoborderbottom" onchange="piecedetache();">
+                                                        <option value="1"></option>
+                                                        <option value="1">Shopping</option>
+                                                        <option value="2">Hébergement & Réservation à hotel</option>
+                                                        <option value="3">Formalité administrative</option>
+                                                        <option value="1">Commission</option>
+                                                        <option value="4">Déplacement aéroport -> logement</option>
+                                                        <option value="9">Autres</option>
+                                                    </select>
+                                                    <span class="formIncice"><sup class="colorstar">*</sup><i class="fas fa-question-circle"></i> Que voulez-vous ?</span><span class="formIncice"></span>
+                                                </div>
+
+                                                <div class="form-group col-lg-12 col-md-12 alignleft padding0" id="div_QvvProffesionnel">
+                                                    <select id="QvvProffesionnel" name="QvvProffesionnel" class="form-control formnoborderbottom" onchange="piecedetache();">
+                                                        <option value="1"></option>
+                                                        <option value="1">Shopping</option>
+                                                        <option value="2">Hébergement & Réservation à hotel</option>
+                                                        <option value="3">Formalité administrative</option>
+                                                        <option value="1">Commission</option>
+                                                        <option value="4">Déplacement aéroport -> logement</option>
+                                                        <option value="9">Autres</option>
+                                                    </select>
+                                                    <span class="formIncice"><sup class="colorstar">*</sup><i class="fas fa-question-circle"></i> Que voulez-vous ?</span><span class="formIncice"></span>
+                                                </div>-->
+                                            </div>
+
+                                            <!-- 1ERES OPTION SUR L'UNIVERSITE-->
+                                            <div id="div_optionsuniversite" class="noshow" data-parent="">
+                                                <div id="optionsuniversite" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                    <div class="form-group col-lg-8 col-md-8 alignleft padding0" id="div_univconnue">
+                                                        <select id="univconnue" name="univconnue" class="form-control formnoborderbottom" onchange="funivconnue()">
+                                                            <option value="1"></option>
+                                                            <option value="oui">Je connais déjà mon université</option>
+                                                            <option value="non">Faites moi des propositions</option>
+                                                        </select>
+                                                        <span class="formIncice"><sup class="colorstar">*</sup><i class="fas fa-question-circle"></i> Choix de l'université</span><span class="formIncice"></span>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-4 col-md-4 alignleft padding0" id="div_chassismoto" >
+                                                        <select id="ChassisMoto" name="ChassisMoto" class="form-control formnoborderbottom">
+
+                                                            <option value="1"></option>
+                                                            <option>Année de prépa</option>
+                                                            <option>1er année</option>
+                                                            <option>2ème année</option>
+                                                            <option>3ème année</option>
+                                                            <option>Master 1</option>
+                                                            <option>Master 2</option>
+                                                            <option>Spécialité</option>
+                                                            <option>Doctorat</option>
+                                                            <option>Autre</option>
+                                                        </select>
+                                                        <span class="formIncice"><sup class="colorstar">*</sup> <i class="fas fa-chalkboard-teacher marginR10"></i>Année d'inscription </span><span class="formIncice"></span>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <!--UNIVERSITE DEJA CONNUE-->
+                                            <div id="div_universiteconnue" class="noshow" data-parent="">
+
+                                                <div id="universiteconnue" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+
+                                                    <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder=""id="nomuniversite" name="nomuniversite"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-university"></i> Nom de l'université <span class="sizelabel">(64)</span></span><span class="formIncice"></span>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder="" id="urluniversite" name="urluniversite"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-globe"></i> Lien internet de l'université <span class="sizelabel">(64)</span></span><span class="formIncice"></span>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder="" id="adresseuniversite" name="adresseuniversite"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><i class="fas fa-map-marker-alt"></i> Adresse physique de l'université <span class="sizelabel">(64)</span></span><span class="formIncice"></span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <!-- DANS LE CAS GENERALE POUR UNIVERSITE-->
+                                            <div id="div_inscriptionuniv" class="" data-parent="">
+                                                <div id="inscriptionuniv" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+
+                                                    <div class="form-group col-lg-3 col-md-4 alignleft padding0" id="div_paysdetude" >
+                                                        <select id="paysdetude" name="paysdetude" class="form-control formnoborderbottom" onchange="typeuniversite($(this));">
+                                                            <option value="1"></option>
+                                                            <option value="france">France</option>
+                                                            <option value="belgique">Belgique</option>
+                                                            <option value="allemagne">Allemagne</option>
+                                                        </select>
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup> <i class="fas fa-globe-europe"></i> Pays d'étude </span><span class="formIncice"></span>
+                                                    </div>
+                                                    <div class="form-group col-lg-4 col-md-4 alignleft padding0" id="div_paysdetude" >
+                                                        <select id="statutUniversite" name="statutUniversite" class="form-control formnoborderbottom" ></select>
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup> <i class="fa fa-university" aria-hidden="true"></i> Statut </span><span class="formIncice"></span>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_villesdetude" >
+                                                        <select id="villesdetude" name="villesdetude" class="form-control formnoborderbottom">
+
+                                                            <option value="1"></option>
+                                                            <option>Année de prépa</option>
+                                                        </select>
+                                                        <span class="formIncice"><i class="fas fa-map-marked-alt"></i> Ville souhaitée </span><span class="formIncice"></span>
+                                                    </div>
+
+
+                                                    <div class="form-group col-lg-12 alignleft padding0">
+                                                        <div class="form-group col-lg-12" style="display: flex; align-items: center; justify-content: space-between;margin: 0px;">
+                                                            <strong id="solariteMin">560<sup>€</sup></strong>
+                                                        </div>
+
+                                                        <input class="form-control formnoborderbottom" type="range" placeholder=""id="scolartite" name="scolartite"  value="" max="" min="" step="" onchange="scolarite($(this));">
+                                                        <div class="form-group col-lg-12" style="display: flex; align-items: center; justify-content: space-between;margin: 0px;">
+                                                            <span class="formIncice"><i class="fas fa-coins"></i> Scolarité MAX (€) <sup class="sizelabel">(5)</sup></span>
+                                                            <strong>
+                                                                <span id="montantScolaite" style="font-size: 18px;color:#CD0016;">1500</span><sup class="red">€</sup>
+                                                            </strong>
+                                                        </div>
+                                                         <sup class="formIncice"></sup>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                        <textarea class="form-control formnoborderbottom" type="text" placeholder="" id="InfoComplementaire" name="InfoComplementaire"  datacheck="" maxlength="400"></textarea>
+                                                        <span class="formIncice">Informations complémentaires <span class="sizelabel">(400)</span></span><span class="formIncice"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- BESOINS A VENIR-->
+                                            <div id="session_besoinavenir" class="" data-parent="">
+
+                                                <div id=besoinavenir"" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                    <p class="col-lg-12 alignleft"> <strong>Je suis également  la recherche de :</strong></p>
+                                                    <input id="demande_avenir" class="noshow">
+                                                    <div class="col-lg-4 col-md-4 padding0 flexBcenter">
+                                                        <input class="checkBox" type="checkbox" placeholder=""id="avenirhebergement" name="avenirhebergement"  onfocusout="a_venir($(this));" datacheck="" maxlength="5">
+                                                        <label for="avenirhebergement" class="checkBlabel pointer"><i class="fas fa-bed"></i> HEBERGEMENT</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 padding0 flexBcenter">
+                                                        <input class="checkBox" type="checkbox" id="avenirAVI" name="avenirAVI"  onfocusout="a_venir($(this));">
+                                                        <label for="avenirAVI" class="checkBlabel pointer"><i class="fas fa-wallet"></i> GARANT - A.V.I</label>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 padding0 flexBcenter">
+                                                        <input class="checkBox" type="checkbox" placeholder=""id="avenirtrsansport" name="avenirtransport"  onfocusout="a_venir($(this));" datacheck="" maxlength="5">
+                                                        <label for="avenirtrsansport" class="checkBlabel pointer"><i class="fas fa-taxi"></i> TRANSPORT </label>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <!-- SERVICE HERBEGEMENT-->
+                                            <div id="div_hebergement" class="" data-parent="">
+                                                <div id="hebergement" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                    <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder=""id="payshebergement" name="payshebergement"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-globe-europe"></i> Pays <sup class="sizelabel">(32)</sup></span> <sup class="formIncice"></sup>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder=""id="villehebergement" name="villehebergement"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-map-marked-alt"></i>  Ville <sup class="sizelabel">(64)</sup></span> <sup class="formIncice"></sup>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-6 col-md-6 alignleft padding0" id="div_paysdetude" >
+                                                        <select id="typehebergement" name="typehebergement" class="form-control formnoborderbottom">
+                                                            <option value="zero"></option>
+                                                            <option value="studio">Studio</option>
+                                                            <option value="residenceuniversitaire">Résidence universitaire</option>
+                                                            <option value="appartement">Appartement</option>
+                                                            <option value="collocation">Collocation</option>
+                                                            <option value="hotel">Réservation à l'hotel</option>
+                                                        </select>
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup> <i class="fas fa-bed"></i> Type d'hébergement </span> <sup class="formIncice"></sup>
+                                                    </div>
+                                                  <div class="form-group col-lg-6 col-md-6 alignleft padding0" id="div_villesdetude" >
+                                                        <select id="villesdetude" name="villesdetude" class="form-control formnoborderbottom">
+
+                                                            <option value="zero"></option>
+                                                            <option>moins d'un mois</option>
+                                                            <option>moins de 3 mois</option>
+                                                            <option>plus de 3 mois</option>
+                                                            <option>1 à 3 ans renouvelable</option>
+                                                            <option>Autre</option>
+                                                        </select>
+                                                        <span class="formIncice"><i class="fas fa-map-marked-alt"></i> Durée moyen </span><span class="formIncice"></span>
+                                                    </div>
+
+
+                                                    <div class="form-group col-lg-12 alignleft padding0">
+                                                        <div class="form-group col-lg-12" style="display: flex; align-items: center; justify-content: space-between;margin: 0px;">
+                                                            <strong id="solariteMin">350<sup>€</sup></strong>
+                                                        </div>
+
+                                                        <input class="form-control formnoborderbottom" type="range" placeholder=""id="scolartite" name="scolartite"  value="650" max="1000" min="350" step="50" onchange="loyer($(this));">
+                                                        <div class="form-group col-lg-12" style="display: flex; align-items: center; justify-content: space-between;margin: 0px;">
+                                                            <span class="formIncice"><i class="fas fa-coins"></i> Loyer MAX (€) <sup class="sizelabel">(5)</sup></span>
+                                                            <strong>
+                                                                <span id="montantLoyer" style="font-size: 18px;color:#CD0016;">650</span><sup class="red">€</sup>
+                                                            </strong>
+                                                        </div>
+                                                        <sup class="formIncice"></sup>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                        <textarea class="form-control formnoborderbottom" type="text" placeholder="" id="InfoComplementaire" name="InfoComplementaire"  datacheck="" maxlength="400"></textarea>
+                                                        <span class="formIncice">Informations complémentaires <span class="sizelabel">(400)</span></span><span class="formIncice"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- SERVICE ATTESTATION AVI ou CAUTIONNEMENT BANCAIRE-->
+                                            <div id="div_attestationAVI" class="" data-parent="">
+                                                <div id="attestationAVI" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                    <div class="form-group col-lg-4 col-md-4 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder="" id="paysCaution" name="paysCaution"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-globe-europe"></i> Pays <sup class="sizelabel">(32)</sup></span> <sup class="formIncice"></sup>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-8 col-md-8 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder=""id="adresseCaution" name="adresseCaution"  onfocusout="Numverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-map-marked-alt"></i>  Adresse complète <sup class="sizelabel">(64)</sup></span> <sup class="formIncice"></sup>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-12 alignleft padding0">
+                                                        <div class="form-group col-lg-12" style="display: flex; align-items: center; justify-content: space-between;margin: 0px;">
+                                                            <strong id="solariteMin">615<sup>€</sup></strong>
+                                                        </div>
+
+                                                        <input class="form-control formnoborderbottom" type="range" placeholder=""id="Caution" name="Caution"  value="650" max="5000" min="350" step="50" onchange="loyer($(this));">
+                                                        <div class="form-group col-lg-12" style="display: flex; align-items: center; justify-content: space-between;margin: 0px;">
+                                                            <span class="formIncice"><i class="fas fa-coins"></i> Montant de la caution (ou AVI) (€) <sup class="sizelabel">(5)</sup></span>
+                                                            <strong>
+                                                                <span id="monantCaution" style="font-size: 18px;color:#CD0016;">650</span><sup class="red">€</sup>
+                                                            </strong>
+                                                        </div>
+                                                        <sup class="formIncice"></sup>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-4 col-md-4 alignleft padding0" id="div_freqCaution" >
+                                                        <select id="freqCaution" name="freqCaution" class="form-control formnoborderbottom">
+                                                            <option value="zero">Mensuel</option>
+                                                            <option value="studio">Annuel</option>
+                                                            <option value="residenceuniversitaire">Autre</option>
+                                                        </select>
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup> <i class="fas fa-bed"></i> Fréquence de versement </span> <sup class="formIncice"></sup>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-8 col-md-8 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder="" id="infoCaution" name="adresseCaution"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><i class="fas fa-map-marked-alt"></i> Complément d'information <sup class="sizelabel">(64)</sup></span> <sup class="formIncice"></sup>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- SERVICE DEPLACEMENT AEROPORT LOGEMENT -->
+                                            <div id="div_trajet" class="" data-parent="">
+                                                <div id="trajet" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                    <div class="form-group col-lg-3 col-md-3 alignleft padding0" id="div_paysdetude" >
+                                                        <select id="paysdarrivee" name="paysdarrivee" class="form-control formnoborderbottom">
+                                                            <option value="zero"></option>
+                                                            <option value="france">France</option>
+                                                            <option value="belgique">Belgique</option>
+                                                            <option value="luxembourg">Luxembourg</option>
+                                                        </select>
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-bed"></i> Pays d'arrivée </span> <sup class="formIncice"></sup>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-9 col-md-9 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder="Nom + N° de terminal" id="aeroparrivee" name="aeroparrivee"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-globe-europe"></i> Aéroport de d'arrivée <sup class="sizelabel">(32)</sup></span> <sup class="formIncice"></sup>
+                                                    </div>
+                                                    <div class="form-group col-lg-4 col-md-4 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder="" id="datearrivee" name="datearrivee"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-globe-europe"></i> Date d'arrivée <sup class="sizelabel">(9)</sup></span> <sup class="formIncice"></sup>
+                                                    </div>
+                                                    <div class="form-group col-lg-4 col-md-4 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder="" id="heurearrivee" name="heurearrivee"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-globe-europe"></i> Heure de d'arrivée <sup class="sizelabel">(8)</sup></span> <sup class="formIncice"></sup>
+                                                    </div>
+                                                    <div class="form-group col-lg-4 col-md-4 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder="" id="nbrpassager" name="nbrpassager"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-globe-europe"></i> Nombre de passagers <sup class="sizelabel">(2)</sup></span> <sup class="formIncice"></sup>
+                                                    </div>
+                                                    <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                        <textarea class="form-control formnoborderbottom" type="text" placeholder="" id="adresseDestination" name="adresseDestination"  datacheck="" maxlength="400"></textarea>
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup>Adresse compléte de la destination<span class="sizelabel">(400)</span></span><span class="formIncice"></span>
+                                                    </div>
+
+                                                    <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                        <textarea class="form-control formnoborderbottom" type="text" placeholder="" id="infotrajet" name="infotrajet"  datacheck="" maxlength="400"></textarea>
+                                                        <span class="formIncice">Informations cmplémentaires<span class="sizelabel">(400)</span></span><span class="formIncice"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- SERVICE SOS ETUDIANT-->
+                                            <div id="div_etudiantsSOS" class="" data-parent="">
+                                                <div id="etudiantsSOS" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                <!--    <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder=""id="nomcompletSOS" name="nomcompletSOS"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-globe-europe"></i> Nom & Prénoms <sup class="sizelabel">(32)</sup></span> <sup class="formIncice"></sup>
+                                                    </div>
+                                                    <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder=""id="mailSOS" name="mailSOS"  onfocusout="mailverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-map-marked-alt"></i>  Adresse mail <sup class="sizelabel">(64)</sup></span> <sup class="formIncice"></sup>
+                                                    </div>
+                                                    <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder=""id="telSOS" name="tellSOS"  onfocusout="Numverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-map-marked-alt"></i>  Téléphone <sup class="sizelabel">(64)</sup></span> <sup class="formIncice"></sup>
+                                                    </div>
+                                                    <div class="form-group col-lg-6 col-md-6 alignleft padding0">
+                                                        <input class="form-control formnoborderbottom" type="text" placeholder="confirmez votre numero" id="conftelSOS" name="conftelSOS"  onfocusout="Numverification($(this));" datacheck="" maxlength="64">
+                                                        <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-map-marked-alt"></i>  Confirmation téléphone <sup class="sizelabel">(64)</sup></span> <sup class="formIncice"></sup>
+                                                    </div>-->
+                                                    <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                        <textarea class="form-control formnoborderbottom" type="text" placeholder="" id="InfoSOS" name="InfoSOS"  datacheck="" maxlength="400"></textarea>
+                                                        <span class="formIncice">Dites nous tous<span class="sizelabel">(400)</span></span><span class="formIncice"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- SERVICE FORMALITE ADMINISTRATIVE-->
+                                            <div id="div_formaliteAdmin" class="" data-parent="">
+                                                <div id="formaliteAdmin" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                    <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                        <textarea class="form-control formnoborderbottom" type="text" placeholder="" id="detailsCourse" name="detailsCourse"  datacheck="" maxlength="400"></textarea>
+                                                        <span class="formIncice">Détails de la course <span class="sizelabel">(600)</span></span><span class="formIncice"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- SERVICE SHOPPING -->
+                                            <div id="div_shoppings" class="" data-parent="">
+                                                <div id="shoppings" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+                                                    <p class="col-lg-12 alignleft"> <strong>NOMBRE D'ARTICLES ?</strong></p>
+                                                    <div class="col-lg-12" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                                                        <div class="col-lg-2 col-md-2 col-sm-2 padding0 flex">
+                                                            <label for="etudiant" class="pointer"><i class="fas fa-shopping-cart"></i> 3</label>
+                                                            <input class="checkBox" type="radio" id="etudiant" name="gender" value="etudiant" onclick="profilSelect($(this));">
+                                                        </div>
+
+                                                        <div class="col-lg-2 col-md-2 col-sm-2 padding0 flex">
+                                                            <label for="etudiant" class="pointer"><i class="fas fa-shopping-cart"></i> 5</label>
+                                                            <input class="checkBox" type="radio" id="etudiant" name="gender" value="etudiant" onclick="profilSelect($(this));">
+                                                        </div>
+
+                                                        <div class="col-lg-2 col-md-2 col-sm-2 padding0 flex">
+                                                            <label for="etudiant" class="pointer"><i class="fas fa-shopping-cart"></i> 10</label>
+                                                            <input class="checkBox" type="radio" id="etudiant" name="gender" value="etudiant" onclick="profilSelect($(this));">
+                                                        </div>
+
+                                                        <div class="col-lg-2 col-md-2 col-sm-2 padding0 flex">
+                                                            <label for="etudiant" class="pointer"><i class="fas fa-shopping-cart"></i> +10</label>
+                                                            <input class="checkBox" type="radio" id="etudiant" name="gender" value="etudiant" onclick="profilSelect($(this));">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12">
+                                                        <div class="row flexStart">
+                                                    <p class="col-lg-12 alignleft"><strong>ARTICLE - <span id="numArticle">1</span></strong>
+
+                                                    </p>
+                                                        <div class="col-lg-9 col-sm-12">
+                                                                <div class="form-group col-lg-12 col-sm-12 alignleft padding0">
+                                                                    <input class="form-control formnoborderbottom" type="text" placeholder=""id="designation" name="designation"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                                    <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-globe-europe"></i> Désignation <sup class="sizelabel">(32)</sup></span> <sup class="formIncice"></sup>
+                                                                </div>
+
+                                                                <div class="form-group col-lg-12 col-sm-12 alignleft padding0">
+                                                                    <input class="form-control formnoborderbottom" type="text" placeholder=""id="designation" name="designation"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                                    <span class="formIncice"><i class="fas fa-globe-europe"></i> lien sur internet <sup class="sizelabel">(32)</sup></span> <sup class="formIncice"></sup>
+                                                                </div>
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                                <input class="form-control formnoborderbottom" type="text" placeholder=""id="qutShopping" name="qutShopping"  onfocusout="Numverification($(this));" datacheck="" maxlength="64">
+                                                                <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-map-marked-alt"></i>  Qt <sup class="sizelabel">(64)</sup></span> <sup class="formIncice"></sup>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                            <textarea class="form-control formnoborderbottom" type="text" placeholder="" id="infoShopping" name="infoShopping"  datacheck="" maxlength="400"></textarea>
+                                                            <span class="formIncice">Dites nous en plus <span class="sizelabel">(400)</span></span><span class="formIncice"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <!-- AUTRES SERVICES -->
+                                            <div id="div_hebergement" class="" data-parent="">
+                                                <div id="hebergement" class="card-body flex">
+
+                                                    <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                        <textarea class="form-control formnoborderbottom" type="text" placeholder="" id="autrecoursesinfo" name="autrecoursesinfo"  datacheck="" maxlength="400"></textarea>
+                                                        <span class="formIncice">Dites nous en plus <span class="sizelabel">(400)</span></span><span class="formIncice"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <div class="flexbox col-lg-12">
+                                                <div class="col-md-6 col-sm-6" style="padding-bottom: 20px;text-align:left;">
+                                                    <span type="submit" class="suivant button" id="" onclick="precedent()"><i class="fas fa-chevron-circle-left"></i> Pécédent</span>
+                                                </div>
+
+                                                <div class="col-md-6 col-sm-6" style="padding-bottom: 20px;">
+                                                    <span class="button gradient-btn w-100" onclick="ValidationForm();"  style="cursor: pointer;">VALIDER</span>
+                                                    <!--onclick="ValidationForm();"-->
+                                                </div>
+                                            </div>
+
+                                            <!-- <div id="collapseTwo" class="collapse show" data-parent="#accordion">
+
+                                                 <div id="DetailServices" class="card-body" style="display: flex; align-items:center; justify-content: space-around; flex-wrap: wrap;">
+
+                                                     <div class="form-group col-lg-12 col-md-12 alignleft padding0" id="div_QvvEtufiant">
+                                                         <select id="QvvEtufiant" name="QvvEtufiant" class="form-control formnoborderbottom" onchange="piecedetache();">
+                                                             <option value="1"></option>
+                                                             <option value="1">Inscription universitaire</option>
+                                                             <option value="2">Hébergement</option>
+                                                             <option value="3">Attestation de Virement Irrévocable (AVI)</option>
+                                                             <option value="4">Déplacement aéroport -> logement</option>
+                                                             <option value="5">SOS Etudiant en détresse (intégration)</option>
+                                                             <option value="6">Formalité administrative</option>
+                                                             <option value="7">Autres</option>
+                                                         </select>
+                                                         <span class="formIncice"><sup class="colorstar">*</sup><i class="fas fa-question-circle"></i> Que voulez-vous ?</span><span class="formIncice"></span>
+                                                     </div>
+
+                                                     <div class="form-group col-lg-12 col-md-12 alignleft padding0" id="div_QvvParticulier">
+                                                         <select id="QvvParticulier" name="QvvParticulier" class="form-control formnoborderbottom" onchange="piecedetache();">
+                                                             <option value="1"></option>
+                                                             <option value="1">Shopping</option>
+                                                             <option value="2">Hébergement & Réservation à hotel</option>
+                                                             <option value="3">Formalité administrative</option>
+                                                             <option value="1">Commission</option>
+                                                             <option value="4">Déplacement aéroport -> logement</option>
+                                                             <option value="9">Autres</option>
+                                                         </select>
+                                                         <span class="formIncice"><sup class="colorstar">*</sup><i class="fas fa-question-circle"></i> Que voulez-vous ?</span><span class="formIncice"></span>
+                                                     </div>
+
+                                                     <div class="form-group col-lg-12 col-md-12 alignleft padding0" id="div_QvvProffesionnel">
+                                                         <select id="QvvProffesionnel" name="QvvProffesionnel" class="form-control formnoborderbottom" onchange="piecedetache();">
+                                                             <option value="1"></option>
+                                                             <option value="1">Shopping</option>
+                                                             <option value="2">Hébergement & Réservation à hotel</option>
+                                                             <option value="3">Formalité administrative</option>
+                                                             <option value="1">Commission</option>
+                                                             <option value="4">Déplacement aéroport -> logement</option>
+                                                             <option value="9">Autres</option>
+                                                         </select>
+                                                         <span class="formIncice"><sup class="colorstar">*</sup><i class="fas fa-question-circle"></i> Que voulez-vous ?</span><span class="formIncice"></span>
+                                                     </div>
+
+
+                                                     <div class="form-group col-lg-12 col-md-12 alignleft padding0" id="div_piecepour" >
+                                                         <select id="piecepour" name="piecepour" class="form-control formnoborderbottom" onchange="piecedetache();">
+                                                             <option value="1"></option>
+                                                             <option value="2">Une voiture d'occasion</option>
+                                                             <option value="3">Une moto d'occasion</option>
+                                                             <option value="4">Un camion d'occasion</option>
+                                                             <option value="5">Un bus d'occasion</option>
+                                                             <option value="6">Un mini-bus d'occasion</option>
+                                                             <option value="7"><i class="fas fa-tractor"></i> Engin agricole d'occasion</option>
+                                                             <option value="8">Des pièces détachées</option>
+                                                             <option value="9">Autres</option>
+                                                         </select>
+
+
+                                                         <span class="formIncice"><sup class="colorstar">*</sup><i class="fas fa-question-circle"></i> une piece pour ?</span><span class="formIncice"></span>
+                                                     </div>
+                                                     <div id="div_nompiece" class="form-group col-lg-11 col-md-11 alignleft padding0" >
+                                                         <input class="form-control formnoborderbottom" type="text" placeholder="" id="nompiece" name="nompiece"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                         <span class="formIncice"><sup class="colorstar">*</sup> Nom de la pièce <span class="sizelabel">(64)</span></span><span class="formIncice"></span>
+                                                     </div>
+
+                                                     <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_neufouocaz">
+                                                         <select id="neufouocaz" name="neufouocaz" class="form-control formnoborderbottom" onchange="piecedetache();">
+                                                             <option value="1"></option>
+                                                             <option value="2">Je veux du neuf</option>
+                                                             <option value="3">Je préfere une occasion</option>
+                                                             <option value="4">Je n'ai pas de préférence</option>
+                                                         </select>
+                                                         <span class="formIncice"><sup class="colorstar">*</sup><i class="fas fa-question-circle"></i> Quel état ?</span><span class="formIncice"></span>
+                                                     </div>
+
+                                                     <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_chassismoto" >
+                                                         <select id="ChassisMoto" name="ChassisMoto" class="form-control formnoborderbottom">
+
+                                                             <option value="1"></option>
+                                                             <option>Sportive</option>
+                                                             <option>Routière</option>
+                                                             <option>Routière GT</option>
+                                                             <option>Custom</option>
+                                                             <option>Trail</option>
+                                                             <option>Tuning</option>
+                                                             <option>Enduro</option>
+                                                             <option>Cross</option>
+                                                             <option>Sidecar</option>
+                                                             <option>Collection</option>
+                                                             <option>3 Roues</option>
+                                                             <option>Scooter</option>
+                                                             <option>Velomoteur</option>
+                                                             <option>Supermotard</option>
+                                                             <option>Poket Bike</option>
+                                                             <option>Roadster</option>
+                                                             <option>Quad</option>
+                                                             <option>Rallye</option>
+                                                             <option>Trial</option>
+                                                             <option>Compétition</option>
+                                                             <option>Autre</option>
+                                                         </select>
+
+
+                                                         <span class="formIncice"><sup class="colorstar">*</sup> <i class="fas fa-motorcycle"></i> Châssis moto ?</span><span class="formIncice"></span>
+                                                     </div>
+
+                                                     <div class="form-group col-lg-5 col-md-5 alignleft padding0">
+                                                         <input class="form-control formnoborderbottom" type="text" placeholder="" id="marques" name="marques"  onfocusout="Alphaverification($(this));" datacheck="" maxlength="32">
+                                                         <span class="formIncice"><sup class="colorstar">* </sup><i class="fas fa-tag"></i> Marque ? <span class="sizelabel">(32)</span></span><span class="formIncice"></span>
+                                                     </div>
+
+                                                     <div class="form-group col-lg-5 col-md-5 alignleft padding0">
+                                                         <input class="form-control formnoborderbottom" type="text" placeholder="" id="modele" name="modele"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="32">
+                                                         <span class="formIncice"><sup class="colorstar">*</sup> Model ? <span class="sizelabel">(32)</span></span><span class="formIncice"></span>
+                                                     </div>
+
+                                                     <div class="form-group col-lg-5 col-md-5 alignleft padding0">
+                                                         <input class="form-control formnoborderbottom" type="text" placeholder="" id="annee" name="annee"  onfocusout="Numverification($(this));" datacheck="" maxlength="4">
+                                                         <span class="formIncice"><sup class="colorstar">*</sup> <i class="fas fa-calendar-alt"></i> Année ? (exp: 2000) <span class="sizelabel">(4)</span></span><span class="formIncice"></span>
+                                                     </div>
+
+                                                     <div class="form-group col-lg-5 col-md-5 alignleft padding0">
+                                                         <input class="form-control formnoborderbottom" type="text" placeholder=""id="PrixMax" name="PrixMax"  onfocusout="Numverification($(this));" datacheck="" maxlength="8">
+                                                         <span class="formIncice"><sup class="colorstar">*</sup> <i class="fas fa-money-bill"></i> Budget max (F CFA) ? <span class="sizelabel">(8)</span></span><span class="formIncice"></span>
+                                                     </div>
+
+                                                     <div class="form-group col-lg-5 col-md-5 alignleft padding0">
+                                                         <input class="form-control formnoborderbottom" type="text" placeholder="" id="kilometrage" name="kilometrage"  onfocusout="Numverification($(this));" datacheck="" maxlength="8">
+                                                         <span class="formIncice">&ensp; <i class="fas fa-clock"></i> KM max ? (exp: 75000) <span class="sizelabel">(6)</span></span><span class="formIncice"></span>
+                                                     </div>
+
+                                                     <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_BoiteVitesse">
+                                                         <select id="BoiteVitesse" name="BoiteVitesse" class="form-control formnoborderbottom">
+                                                             <option value="0"></option>
+                                                             <option>Automatique</option>
+                                                             <option>Manuelle</option>
+                                                             <option>Semi-automatique</option>
+                                                         </select>
+                                                         <span class="formIncice"> &ensp;<i class="fas fa-cogs"></i> Boite à vitesse ?</span><span class="formIncice"></span>
+                                                     </div>
+
+                                                     <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_carburant" >
+                                                         <select id="casuniversite" name="casuniversite" class="form-control formnoborderbottom" onchange="piecedetache();">
+                                                             <option value="1"></option>
+                                                             <option value="2">Je connais déjà mon université</option>
+                                                             <option value="3">Faites moi des propositions</option>
+                                                         </select>
+                                                         <span class="formIncice"><sup class="colorstar">*</sup> <i class="fas fa-gas-pump"></i> Type de carburant ?</span><span class="formIncice"></span>
+                                                     </div>
+
+                                                     <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_NbrPortes">
+                                                         <select id="piecepour" name="anneeuniversitaire" class="form-control formnoborderbottom" onchange="piecedetache();">
+                                                             <option value="1"></option>
+                                                             <option value="2">Prépa Licence</option>
+                                                             <option value="3">1er année</option>
+                                                             <option value="4">2ème année</option>
+                                                             <option value="5">3ème année</option>
+                                                             <option value="6">Master 1</option>
+                                                             <option value="7">Master 2</option>
+                                                             <option value="8">Spécialité</option>
+                                                             <option value="9">Doctorat</option>
+                                                             <option value="10">Autres</option>
+                                                         </select>
+                                                         <span class="formIncice">&ensp; <i class="fas fa-window-maximize"></i> Nombre de portes?</span><span class="formIncice"></span>
+                                                     </div>
+
+
+                                                     <div id="blocketudiant" class="w-100">
+                                                         <div id="inscription" class="w-100 col-lg-12">
+                                                             <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_casuniversite" >
+                                                                 <select id="casuniversite" name="casuniversite" class="form-control formnoborderbottom" onchange="piecedetache();">
+                                                                     <option value="1"></option>
+                                                                     <option value="2">Je connais déjà mon université</option>
+                                                                     <option value="3">Faites moi des propositions</option>
+                                                                 </select>
+                                                                 <span class="formIncice"><sup class="colorstar red">*</sup><i class="fas fa-question-circle"></i> Connaissez-vous votre université ?</span><span class="formIncice"></span>
+                                                             </div>
+                                                             <div class="form-group col-lg-5 col-md-5 alignleft padding0" id="div_anneeuniversitaire">
+                                                                 <select id="piecepour" name="anneeuniversitaire" class="form-control formnoborderbottom" onchange="piecedetache();">
+                                                                     <option value="1"></option>
+                                                                     <option value="2">Prépa Licence</option>
+                                                                     <option value="3">1er année</option>
+                                                                     <option value="4">2ème année</option>
+                                                                     <option value="5">3ème année</option>
+                                                                     <option value="6">Master 1</option>
+                                                                     <option value="7">Master 2</option>
+                                                                     <option value="8">Spécialité</option>
+                                                                     <option value="9">Doctorat</option>
+                                                                     <option value="10">Autres</option>
+                                                                 </select>
+                                                                 <span class="formIncice"><sup class="colorstar">*</sup><i class="fas fa-question-circle"></i> Année universitaire ?</span><span class="formIncice"></span>
+                                                             </div>
+
+
+                                                             <div id="universiteOk">
+                                                                 <div id="div_universite" class="form-group col-lg-12 col-md-12 alignleft padding0" >
+                                                                     <input class="form-control formnoborderbottom" type="text" placeholder="" id="universite" name="universite"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="32">
+                                                                     <span class="formIncice"><sup class="colorstar red">*</sup> Nom de l'université ? <span class="sizelabel">(32)</span></span><span class="formIncice"></span>
+                                                                 </div>
+                                                                 <div id="div_universite" class="form-group col-lg-12 col-md-12 alignleft padding0" >
+                                                                     <input class="form-control formnoborderbottom" type="text" placeholder="" id="urluniversite" name="urluniversite"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="64">
+                                                                     <span class="formIncice"><sup class="colorstar red">*</sup> Site internet de l'université ? <span class="sizelabel">(64)</span></span><span class="formIncice"></span>
+                                                                 </div>
+                                                                 <div id="div_adresseuniversite" class="form-group col-lg-12 col-md-12 alignleft padding0" >
+                                                                     <input class="form-control formnoborderbottom" type="text" placeholder="" id="adresseuniversite" name="adresseuniversite"  onfocusout="AlphaNumverification($(this));" datacheck="" maxlength="32">
+                                                                     <span class="formIncice"><sup class="colorstar">*</sup> Adresse de l'université ? <span class="sizelabel">(32)</span></span><span class="formIncice"></span>
+                                                                 </div>
+                                                             </div>
+
+                                                             <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                                 <textarea class="form-control formnoborderbottom" type="text" placeholder="" id="InfoComplementaire" name="InfoComplementaire"  datacheck="" maxlength="400"></textarea>
+                                                                 <span class="formIncice">Informations complémentaires <span class="sizelabel">(400)</span></span><span class="formIncice"></span>
+                                                             </div>
+                                                         </div>
+                                                         <div id="deplacement">
+
+
+                                                         </div>
+                                                         <div id="hebergement">
+
+
+                                                         </div>
+                                                         <div id="avi">
+
+
+                                                         </div>
+                                                         <div id="sos">
+
+
+                                                         </div>
+                                                         <div id="formalités">
+
+
+                                                         </div>
+                                                         <div id="autre">
+
+
+                                                         </div>
+
+
+                                                     </div>
+
+
+                                                     <div class="form-group col-lg-12 col-md-12 alignleft padding0">
+                                                         <textarea class="form-control formnoborderbottom" type="text" placeholder="" id="InfoComplementaire" name="InfoComplementaire"  datacheck="" maxlength="200"></textarea>
+                                                         <span class="formIncice">Informations complémentaires <span class="sizelabel">(200)</span></span><span class="formIncice"></span>
+                                                     </div>
+
+
+
+                                                     <div class="flexbox col-lg-12">
+                                                         <div class="col-md-6 col-sm-6" style="padding-bottom: 20px;text-align:left;">
+                                                             <span type="submit" class="suivant button" id="" onclick="precedent()"><i class="fas fa-chevron-circle-left"></i> Pécédent</span>
+                                                         </div>
+
+                                                         <div class="col-md-6 col-sm-6" style="padding-bottom: 20px;">
+                                                             <span class="button gradient-btn w-100" onclick="ValidationForm();"  style="cursor: pointer;">VALIDER</span>
+                                                             onclick="ValidationForm();"-->
+
+                                        </div>
+
+                                    </div>
+
+                                    <div id="servicesProfessionnel">
+
+
+                                    </div>
+
+                                    <div id="serviceParticulier">
+
+
+                                    </div>
+
+
+
+                                </form>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <div class="image widget bottom20"><img alt="SEO" src="images/aboutus.png"></div>
+                    <div class="col-12 px-0">
+                        <div class="w-100">
+                            <!-- <div class="full-map short-map" id="map"></div>-->
+                            <div class="owl-carousel" id="service-detail">
+                                <div class="item">
+                                    <div class="image"><img alt="SEO" src="images/blog-measonry2.jpg"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"><img alt="SEO" src="images/blog-measonry2.jpg"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"><img alt="SEO" src="images/blog-measonry2.jpg"></div>
+                                </div>
+                                <div class="item">
+                                    <div class="image"><img alt="SEO" src="images/blog-measonry2.jpg"></div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="widget heading_space text-center text-md-left">
+                        <h4 class="text-capitalize darkcolor bottom20">Besoin d'aide ?</h4>
+                        <div class="contact-table colorone d-table bottom15">
+                            <div class="d-table-cell cells">
+                                <span class="icon-cell"><i class="fas fa-mobile-alt"></i></span>
+                            </div>
+                            <div class="d-table-cell cells">
+                                <p class="bottom0">+33 6 69 35 34 27 <span class="d-block">+229 66 18 98 98</span></p>
+                            </div>
+                        </div>
+                        <div class="contact-table colorone d-table bottom15 text-left">
+                            <div class="d-table-cell cells">
+                                <span class="icon-cell"><i class="fas fa-map-marker-alt"></i></span>
+                            </div>
+                            <div class="d-table-cell cells">
+                                <p class="bottom0">Carré 1440 AGONTINKON, COTONOU
+                                    <span class="d-block">REP. BENIN</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-table colorone d-table text-left">
+                            <div class="d-table-cell cells">
+                                <span class="icon-cell"><i class="far fa-clock"></i></span>
+                            </div>
+                            <div class="d-table-cell cells">
+                                <p class="bottom0">Lundi à Samedi- 09:00 à 18:30
+                                    <span class="d-block">Support en ligne : 24H / 24H et 7J / 7J</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="button btnsecondary gradient-btn top30">Télécharger notre brochue</a>
+                    </div>
+                    <!--<div class="col-lg-12 col-md-12" style="padding:0px;">
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link darkcolor" data-toggle="collapse" href="#collapseOne1">Our Mission</a>
+                            </div>
+                            <div id="collapseOne1" class="collapse show" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link darkcolor" data-toggle="collapse" href="#collapseTwo">Our Goals</a>
+                            </div>
+                            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link darkcolor" data-toggle="collapse" href="#collapseThree">Inspections & Occupancy </a>
+                            </div>
+                            <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link darkcolor" data-toggle="collapse" href="#collapseFour">Top Achievements </a>
+                            </div>
+                            <div id="collapseFour" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </section>
+    <!-- Services us ends -->
+{% endblock %}
+{% block javascripts_complements %}
+    <script type="application/javascript" src="/mainJs/ShoppingDemarches.js"></script>
+{% endblock %}

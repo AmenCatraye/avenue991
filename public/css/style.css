@@ -704,11 +704,11 @@ section,
     bottom: 30px;
     -webkit-background-size: 200% auto;
     background-size: 200% auto;
-    background-image: -webkit-gradient(linear, left top, right top, from(#5192e1), color-stop(51%, #FF4000), to(#5192e1));
-    background-image: -webkit-linear-gradient(left, #5192e1 0%, #FF4000 51%, #5192e1 100%);
-    background-image: -moz-linear-gradient(left, #5192e1 0%, #FF4000 51%, #5192e1 100%);
-    background-image: -o-linear-gradient(left, #5192e1 0%, #FF4000 51%, #5192e1 100%);
-    background-image: linear-gradient(to right, #5192e1 0%, #FF4000 51%, #5192e1 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#C31120), color-stop(51%, #FF4000), to(#C31120));
+    background-image: -webkit-linear-gradient(left, #C31120 0%, #FF4000 51%, #C31120 100%);
+    background-image: -moz-linear-gradient(left, #C31120 0%, #FF4000 51%, #C31120 100%);
+    background-image: -o-linear-gradient(left, #C31120 0%, #FF4000 51%, #C31120 100%);
+    background-image: linear-gradient(to right, #C31120 0%, #FF4000 51%, #C31120 100%);
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     -o-transform: scale(0);
@@ -795,7 +795,12 @@ section,
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #C31120;
+    background-image: -webkit-gradient(linear, left top, right top, from(#CD0016), color-stop(51%, #FF4000), to(#C31120));
+    background-image: -webkit-linear-gradient(left, #CD0016 0%, #FF4000 51%, #C31120 100%);
+    background-image: -moz-linear-gradient(left, #CD0016 0%, #FF4000 51%, #C31120 100%);
+    background-image: -o-linear-gradient(left, #CD0016 0%, #FF4000 51%, #C31120 100%);
+    background-image: linear-gradient(to right, #CD0016 0%, #FF4000 51%, #C31120 100%);
+
     transform: scale(0);
     -o-transform: scale(0);
     -ms-transform: scale(0);
@@ -1647,11 +1652,11 @@ ul.social-icons.white li a:focus {
     display: inline-block;
     -webkit-background-size: 200% auto;
     background-size: 200% auto;
-    background-image: -webkit-gradient(linear, left top, right top, from(#5192e1), color-stop(51%, #23ced5), to(#5192e1));
-    background-image: -webkit-linear-gradient(left, #5192e1 0%, #23ced5 51%, #5192e1 100%);
-    background-image: -moz-linear-gradient(left, #5192e1 0%, #23ced5 51%, #5192e1 100%);
-    background-image: -o-linear-gradient(left, #5192e1 0%, #23ced5 51%, #5192e1 100%);
-    background-image: linear-gradient(to right, #5192e1 0%, #23ced5 51%, #5192e1 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#C31120), color-stop(51%, #FF4000), to(#C31120));
+    background-image: -webkit-linear-gradient(left, #C31120 0%, #FF4000 51%, #C31120 100%);
+    background-image: -moz-linear-gradient(left, #C31120 0%, #FF4000 51%,#C31120 100%);
+    background-image: -o-linear-gradient(left, #C31120 0%, #FF4000 51%, #C31120 100%);
+    background-image: linear-gradient(to right, #C31120 0%, #FF4000 51%, #C31120 100%);
     position: absolute;
     left: 0;
     right: 0;
@@ -2150,7 +2155,7 @@ a.dropdown-toggle::after {
 }
 
 .services-main:hover h3 {
-    background-image: -webkit-gradient(linear, left top, right top, from(#5192e1), color-stop(51%, #23ced5), to(#5192e1));
+    background-image: -webkit-gradient(linear, left top, right top, from(#C31120), color-stop(51%, #FF4000), to(#C31120));
     background-clip: border-box;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@colorPrimary', endColorstr='@colorSecondary', GradientType=1);
     -webkit-background-clip: text;
@@ -2629,7 +2634,7 @@ position: absolute;
     }
     .carousel-shop-detail .owl-nav button:focus {
         background: #ffffff;
-        color: #5192e1;
+        color: #C31120;
     }
     .coming-soon-heading {
         font-size: 70px;
@@ -2886,11 +2891,11 @@ position: absolute;
     transform: scale(.5);
     -webkit-background-size: 200% auto;
     background-size: 200% auto;
-    background-image: -webkit-gradient(linear, left top, right top, from(#5192e1), color-stop(51%, #23ced5), to(#5192e1));
-    background-image: -webkit-linear-gradient(left, #5192e1 0%, #23ced5 51%, #5192e1 100%);
-    background-image: -moz-linear-gradient(left, #5192e1 0%, #23ced5 51%, #5192e1 100%);
-    background-image: -o-linear-gradient(left, #5192e1 0%, #23ced5 51%, #5192e1 100%);
-    background-image: linear-gradient(to right, #5192e1 0%, #23ced5 51%, #5192e1 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#CD0016), color-stop(51%, #FF4000), to(#C31120));
+    background-image: -webkit-linear-gradient(left, #CD0016 0%, #FF4000 51%, #C31120 100%);
+    background-image: -moz-linear-gradient(left, #CD0016 0%, #FF4000 51%, #C31120 100%);
+    background-image: -o-linear-gradient(left, #CD0016 0%, #FF4000 51%, #C31120 100%);
+    background-image: linear-gradient(to right,#CD0016 0%, #FF4000 51%, #C31120 100%);
 }
 
 .owl-prev:hover,
@@ -3064,7 +3069,7 @@ position: absolute;
 }
 
 .service-detail-header {
-    background: url(../images/monto.jpg) no-repeat;
+    background: url(../images/shopping2.jpg) no-repeat;
 }
 
 .contact-header {
@@ -3084,7 +3089,7 @@ position: absolute;
 }
 
 .shop-header {
-    background: url(../images/bg-shop-header.jpg) no-repeat;
+    background: url(../images/ecommerce.png) no-repeat;
 }
 
 .cart-header {
@@ -3128,7 +3133,7 @@ position: absolute;
 }
 
 .testimonial-bg {
-    background: url(../images/testimonial-bg.jpg) no-repeat;
+    background: url(../images/avisclient.jpg) no-repeat;
 }
 
 .contact-banner::before,
@@ -3983,11 +3988,11 @@ iframe {
 .overlay {
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
-    background-image: -webkit-linear-gradient(to right, #23ced5aa 0%, #5192e1aa 100%);
-    background-image: -moz-linear-gradient(to right, #23ced5aa 0%, #5192e1aa 100%);
-    background-image: -ms-linear-gradient(to right, #23ced5aa 0%, #5192e1aa 100%);
-    background-image: -o-linear-gradient(to right, #23ced5aa 0%, #5192e1aa 100%);
-    background-image: linear-gradient(to right, #23ced5aa 0%, #5192e1aa 100%);
+    background-image: -webkit-linear-gradient(to right, #FF4000 0%, #C31120 100%);
+    background-image: -moz-linear-gradient(to right, #FF4000 0%, #C31120 100%);
+    background-image: -ms-linear-gradient(to right, #FF4000 0%, #C31120 100%);
+    background-image: -o-linear-gradient(to right, #FF4000 0%, #C31120 100%);
+    background-image: linear-gradient(to right, #FF4000 0%, #C31120 100%);
     position: absolute;
     opacity: 0;
     visibility: hidden;
@@ -3998,11 +4003,11 @@ iframe {
     top: 0;
 }
 .overlay-blue{
-    background-image: -webkit-linear-gradient(to right, #23ced5 0%, #5192e1 100%);
-    background-image: -moz-linear-gradient(to right, #23ced5 0%, #5192e1 100%);
-    background-image: -ms-linear-gradient(to right, #23ced5 0%, #5192e1 100%);
-    background-image: -o-linear-gradient(to right, #23ced5 0%, #5192e1 100%);
-    background-image: linear-gradient(to right, #23ced5 0%, #5192e1 100%);
+    background-image: -webkit-linear-gradient(to right, #FF4000 0%, #C31120 100%);
+    background-image: -moz-linear-gradient(to right, #FF4000 0%, #C31120 100%);
+    background-image: -ms-linear-gradient(to right, #FF4000 0%, #C31120 100%);
+    background-image: -o-linear-gradient(to right, #FF4000 0%, #C31120 100%);
+    background-image: linear-gradient(to right, #FF4000 0%, #C31120 100%);
     visibility: visible;
 }
 
@@ -4193,11 +4198,11 @@ iframe {
 .testimonial-wrapp .quoted {
     -webkit-background-size: 100% 100%;
     background-size: 200% 100%;
-    background-image: -webkit-gradient(linear, left top, right top, from(#5192e1), color-stop(51%, #23ced5), to(#5192e1));
-    background-image: -webkit-linear-gradient(left, #5192e1 0%, #23ced5 51%, #5192e1 100%);
-    background-image: -moz-linear-gradient(left, #5192e1 0%, #23ced5 51%, #5192e1 100%);
-    background-image: -o-linear-gradient(left, #5192e1 0%, #23ced5 51%, #5192e1 100%);
-    background-image: linear-gradient(to right, #5192e1 0%, #23ced5 51%, #5192e1 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#C31120), color-stop(51%, #FF4000), to(#C31120));
+    background-image: -webkit-linear-gradient(left, #C31120 0%, #FF4000 51%, #C31120 100%);
+    background-image: -moz-linear-gradient(left, #C31120 0%, #FF4000 51%, #C31120 100%);
+    background-image: -o-linear-gradient(left, #C31120 0%, #FF4000 51%, #C31120 100%);
+    background-image: linear-gradient(to right, #C31120 0%, #FF4000 51%, #C31120 100%);
     color: #fff;
     font-size: 20px;
     line-height: 50px;
@@ -4266,11 +4271,11 @@ h4.darkcolor {
     width: 30px;
     -webkit-background-size: 200% auto;
     background-size: 200% auto;
-    background-image: -webkit-gradient(linear, left top, right top, from(#5192e1), color-stop(51%, #23ced5), to(#5192e1));
-    background-image: -webkit-linear-gradient(left, #5192e1 0%, #23ced5 51%, #5192e1 100%);
-    background-image: -moz-linear-gradient(left, #5192e1 0%, #23ced5 51%, #5192e1 100%);
-    background-image: -o-linear-gradient(left, #5192e1 0%, #23ced5 51%, #5192e1 100%);
-    background-image: linear-gradient(to right, #5192e1 0%, #23ced5 51%, #5192e1 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#C31120), color-stop(51%, #FF4000), to(#C31120));
+    background-image: -webkit-linear-gradient(left, #C31120 0%, #FF4000 51%, #C31120 100%);
+    background-image: -moz-linear-gradient(left, #C31120 0%, #FF4000 51%, #C31120 100%);
+    background-image: -o-linear-gradient(left, #C31120 0%, #FF4000 51%, #C31120 100%);
+    background-image: linear-gradient(to right, #C31120 0%, #FF4000 51%, #C31120 100%);
     -webkit-border-radius: 50%;
     border-radius: 50%;
     z-index: -2;
@@ -5387,7 +5392,7 @@ ul.rounded li::before{
 .carousel-shop-detail .owl-nav button:hover,
 #carousel-gallery-detail .owl-nav button:hover {
     background: #ffffff;
-    color: #5192e1;
+    color: #C31120;
 }
 
 .carousel-shop-detail .owl-nav button:before,
@@ -6161,7 +6166,7 @@ ul.count_down.white li p:nth-child(2) {
     top: -30px;
     right: 15px;
     font-size: 60px;
-    color: #C31120;
+    color: #CD0016;
     z-index: 1;
 }
 
@@ -6262,11 +6267,11 @@ ul.count_down.white li p:nth-child(2) {
     z-index: -1;
     -webkit-background-size: 200% auto;
     background-size: 200% auto;
-    background-image: -webkit-gradient(linear, left top, right top, from(#C31120), color-stop(51%, #FF4000), to(#C31120));
-    background-image: -webkit-linear-gradient(left, #C31120 0%, #FF4000 51%, #C31120 100%);
-    background-image: -moz-linear-gradient(left, #C31120 0%, #FF4000 51%, #C31120 100%);
-    background-image: -o-linear-gradient(left, #C31120 0%, #FF4000 51%, #C31120 100%);
-    background-image: linear-gradient(to right, #C31120 0%, #FF4000 51%, #C31120 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#CD0016), color-stop(51%, #FF4000), to(#C31120));
+    background-image: -webkit-linear-gradient(left, #CD0016 0%, #FF4000 51%, #C31120 100%);
+    background-image: -moz-linear-gradient(left, #CD0016 0%, #FF4000 51%, #C31120 100%);
+    background-image: -o-linear-gradient(left, #CD0016 0%, #FF4000 51%, #C31120 100%);
+    background-image: linear-gradient(to right, #CD0016 0%, #FF4000 51%, #C31120 100%);
     background-position: right center;
 }
 
