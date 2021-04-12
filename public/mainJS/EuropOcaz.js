@@ -324,7 +324,7 @@ function ValidationForm(){
         if($('#QueVoulezVous option:selected').val() !=1 && $('#marques').attr('datacheck')==3 && $('#modele').attr('datacheck')==3 && $('#annee').attr('datacheck')==3 && $('#PrixMax').attr('datacheck')==3){
             // && $('#Carburant option:selected').val() !=1
             // Si tous les champs bligatoires ont été rensignés, on passe  la validation d formulaire selon le cas
-            if($('#jeSuis option:selected').val()===2){
+           /* if($('#jeSuis option:selected').val()===2){
                 var route = "{{ path('cmdOcazPart', {'slug': 'cmdOcazPart'})|escape('js') }}";
                 $('#accordion').attr({action : route});
 
@@ -333,7 +333,7 @@ function ValidationForm(){
                 $('#accordion').attr({action : path('cmdOcazEnt')});
                }else if($('#jeSuis option:selected').val()===4){
                 $('#accordion').attr({action : path('cmdOcazCom')});
-            }
+            }*/
 
             $('#accordion').submit();
 

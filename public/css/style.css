@@ -3821,10 +3821,20 @@ iframe {
     padding-bottom: 1.35rem;
 }
 
+.card-body-2 {
+    /*border-top: 1px solid rgba(0, 0, 0, .1);*/
+    border-top: 1px solid #FF4000;
+    padding-top: 1.85rem;
+    padding-bottom: 1.35rem;
+}
+
 .card-body p:last-child {
     margin-bottom: 0;
 }
 
+.card-body-2 p:last-child {
+    margin-bottom: 0;
+}
 
 /*Accordion ends*/
 
