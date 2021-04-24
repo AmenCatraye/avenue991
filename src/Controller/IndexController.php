@@ -14,16 +14,16 @@ use App\Entity\UnivInsc;
 use App\Entity\Avi;
 use App\Entity\Transport;
 
-
-
-
-
-use Doctrine\Persistence\ObjectManager;
-use http\Env\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request as HttpRequest;
 use Doctrine\ORM\EntityManagerInterface;
+
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
+
+use Doctrine\Persistence\ObjectManager;
+use http\Env\Request;
 
 use Symfony\Component\Routing\Annotation\Route;
 use function App\Controller\avi;
@@ -33,6 +33,7 @@ use function App\Controller\transport;
 
 class IndexController extends AbstractController
 {
+
     /**
      * @Route("/Accueil", name="Accueil")
      */
@@ -195,18 +196,7 @@ class IndexController extends AbstractController
     /**
      * @Route("/shopping&demarches", name="shopping&demarches")
      */
-    public function shoppingdemarches(): Response
-    {
-
-        return $this->render('index/shoppingdemarches.html.twig', [
-            'controller_name' => 'IndexController',
-        ]);
-    }
-
-    /**
-     * @Route("/shoppingscourses", name="shoppingscourses")
-     */
-    public function inscriptionUniv(HttpRequest $request, EntityManagerInterface $manager): Response
+    public function ShoppingsDemarches(HttpRequest $request, EntityManagerInterface $manager): Response
     {
         dump($request);
 
@@ -276,7 +266,6 @@ class IndexController extends AbstractController
                 ->setCommentaire($request->request->get('commentaires'));
             $manager->persist($hebergement);
             $manager->flush();
-
         }
 
         //FONCTION TRANSPORT
@@ -327,7 +316,6 @@ class IndexController extends AbstractController
 
             $manager->persist($formaliteCourse);
             $manager->flush();
-
         }
 
         if ($request->request->count() > 0) {
@@ -336,6 +324,7 @@ class IndexController extends AbstractController
             $profilClient = $request->request->get('profilClientSelect');
 
         if($profilClient=='etudiant'){
+
             //Enregistrement du nom de l'étudiant dans la table etudiant
             $etudiant = new Etudiants();
             $etudiant->setNomprenoms($request->request->get('nometprenoms3'))
@@ -355,6 +344,7 @@ class IndexController extends AbstractController
             switch ($QvvClient){
                 case'inscription':
                     InscriptionUniversite($request, $manager);
+                    sendEmail();
                     break;
                 case'shopping':
                     shoppings($request, $manager, $y);
@@ -383,8 +373,12 @@ class IndexController extends AbstractController
             $manager->persist($particulier);
             $manager->flush();
 
+
+
             $mail = $request->request->get('adressemail2');
             $tel= $request->request->get('telephone2');
+
+           //\MailerController::sendEmail();
 
             //Création de l'identifiant client = mail/tel
             $y = $mail.'/'.$tel;
@@ -417,6 +411,7 @@ class IndexController extends AbstractController
             $manager->persist($professionnel);
             $manager->flush();
 
+
             $mail = $request->request->get('adressemail');
             $tel= $request->request->get('telephone');
 
@@ -425,7 +420,6 @@ class IndexController extends AbstractController
 
             switch ($QvvClient){
                 case'shopping':
-
                     shoppings($request, $manager, $y);
                     break;
                 case 'hebergement':
@@ -441,13 +435,13 @@ class IndexController extends AbstractController
                     transport($request, $manager, $y);
                     break;
             }
+        }
 
 
         }
-       return $this->render('index/shoppingdemarches.html.twig');
-
-        }
+        return $this->render('index/shoppingdemarches.html.twig');
     }
 
 }
+
 ?>
